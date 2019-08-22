@@ -1,0 +1,48 @@
+{
+  "name": "mktg-dev-test",
+  "description": "Technical evaluation for web dev applicants",
+  "version": "0.0.1",
+  "author": "HashiCorp",
+  "dependencies": {
+    "@hashicorp/hashi-content": "^2.3.5-alpha.0",
+    "@hashicorp/hashi-email-subscribe": "^3.0.0-alpha.0",
+    "@hashicorp/hashi-footer": "^2.0.13-alpha.0",
+    "@hashicorp/hashi-global-styles": "^2.1.6-alpha.0",
+    "@hashicorp/hashi-nav": "^2.0.10-alpha.0",
+    "@hashicorp/hashi-secondary-nav": "^2.0.11-alpha.0",
+    "@hashicorp/hashi-section-header": "^5.0.10-alpha.0",
+    "@hashicorp/next-hashicorp": "1.5.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "marked": "^0.7.0",
+    "next": "^9.0.2",
+    "nprogress": "^0.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "slugify": "^1.3.4",
+    "stringify-object": "^3.3.0"
+  },
+  "devDependencies": {
+    "husky": "^3.0.1",
+    "inquirer": "^6.5.0",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "next-hashicorp precommit"
+    }
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "npm start",
+    "dynamic": "NODE_ENV=production next build && node server.js",
+    "format": "next-hashicorp format",
+    "generate:analytics": "next-hashicorp analytics",
+    "generate:component": "next-hashicorp generate component",
+    "lint": "next-hashicorp lint",
+    "start": "node server.js",
+    "static": "next build && next export"
+  }
+}

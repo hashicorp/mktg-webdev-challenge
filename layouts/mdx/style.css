@@ -1,0 +1,18 @@
+@import '@hashicorp/hashi-global-styles/custom-properties/colors.css';
+@import '@hashicorp/hashi-global-styles/code-highlighting.css';
+@import '@hashicorp/hashi-content/dist/style.css';
+
+:root {
+  --highlight-color: var(--brand);
+}
+
+#intro {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.g-content img {
+  width: 50%;
+  display: block;
+  margin: 50px auto;
+}

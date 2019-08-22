@@ -1,0 +1,56 @@
+import Link from 'next/link'
+
+## HashiCorp Marketing Webdev Challenge
+
+This is a quick technical evaluation. The task is to replicate the [Tao of HashiCorp](https://www.hashicorp.com/tao-of-hashicorp) page, using our current tech stack.
+
+Treat this the same way you would if you started working with us and this was your first day -- that is, feel free to ask questions as much as you want. We will set up a slack channel for you to ask questions and interact with us. This is quite similar to the type of task we would assign a new hire on their first day, in fact.
+
+We expect this to be done within a day - if you are approaching 8 hours, you can just stop where you are and we'll continue on with the evaluation.
+
+### Fetching Data
+
+This project uses [Next.js](https://nextjs.org), a react-based framework that can generate static or dynamic websites. We have a tool called `next-hashicorp` layered into the config that provides several utilities, especially helpful for loading remote data.
+
+The data for this project can be fetched from our CMS, `next-hashicorp` exports a function that allows you to easily fetch the data. An example might look something like this:
+
+```js
+import { fetch } from '@hashicorp/next-hashicorp/dato/client'
+import someQuery from './query.graphql'
+
+fetch({ query: someQuery }).then(console.log)
+```
+
+Next.js [conventions](https://nextjs.org/learn/basics/fetching-data-for-pages), however, dictate that a property called `getInitialProps` can be added to any component within the `pages` directory, which is an async function that will be executed before the component mounts, passing the returned object into the component as props. So, within this project, your initial data fetch might look something like this:
+
+```js
+import { fetch } from '@hashicorp/next-hashicorp/dato/client'
+import someQuery from './query.graphql'
+
+function somePage({ queryResult }) {
+  return <p>{JSON.stringify(queryResult)}</p>
+}
+
+somePage.getInitialProps = async () => {
+  const { queryResult } = await fetch({ query: someQuery })
+  return { queryResult }
+}
+
+export default somePage
+```
+
+You'll see a similar template provided in the `pages/tao` folder, which is working out of the box.
+
+Our CMS, [DatoCMS](), exposes a public GraphQL API to our data which [you can explore here using GraphiQL](https://cda-explorer.datocms.com/?apitoken=78d2968c99a076419fbb&query=query%20Tao%20%7B%0A%20%20pageData%3A%20templatePage%28filter%3A%20%7B%20id%3A%20%7B%20eq%3A%2085309%20%7D%20%7D%20%29%20%7B%0A%20%20%20%20slug%0A%20%20%7D%0A%7D&operationName=Tao). We loaded up the same query as you have in the `tao` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
+
+### Building The Page
+
+Once you have the data, the next step is to build out the page! There's no interactivity on this page, so it will be a pure markup-based challenge here. We expect the markup to be clear and semantic, and the styling to be clear, well-structured, and good-looking. Do your best to match the styling on the existing page. Feel free to build out components as part of the page to reduce repetition and break out reasonable chunks of code. The `components` folder can be a home to them.
+
+All images on the page can be retrieved from the CMS via URLs from the graphql query. And we expect the page to be styled responsively so it looks great on both mobile and desktop. Also when you click the link below, you might not see styles load initially. A quick refresh will fix this for the rest of the run.
+
+<Link href="/tao-of-hashicorp">
+  <a>&raquo; Here's the page!</a>
+</Link>
+
+![excited bun](https://media.giphy.com/media/cMnt7i2RykmpW/giphy.gif)

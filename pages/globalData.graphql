@@ -1,0 +1,9 @@
+query layoutQuery {
+  globalNavigation {
+    ...nav
+  }
+
+  globalFooter {
+    ...footer
+  }
+}

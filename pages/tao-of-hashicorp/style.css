@@ -1,0 +1,11 @@
+@import '@hashicorp/hashi-email-subscribe/dist/style.css';
+@import '@hashicorp/hashi-section-header/dist/style.css';
+@import '@hashicorp/hashi-secondary-nav/dist/style.css';
+
+/* your styles here! */
+/* you can use standard css plus anything from postcss-preset-env */
+/* ref: https://preset-env.cssdb.org/ */
+
+.my-data {
+  color: red;
+}

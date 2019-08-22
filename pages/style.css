@@ -1,0 +1,5 @@
+@import '@hashicorp/hashi-global-styles/style.css';
+
+a {
+  cursor: pointer;
+}
