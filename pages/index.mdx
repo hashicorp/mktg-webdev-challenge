@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 ## HashiCorp Marketing Webdev Challenge
 
-This is a quick technical evaluation. The task is to replicate the [Tao of HashiCorp](https://www.hashicorp.com/tao-of-hashicorp) page, using our current tech stack.
+This is a quick technical evaluation. The task is to replicate the [Tao of HashiCorp](https://www.hashicorp.com/tao-of-hashicorp) page, using our current tech stack. Treat the existing page _as if it were a design mock_ -- looking at the source or trying to exactly replicate the live page's code is not what we're looking for and it will slow you down and make this more difficult.
 
-Treat this the same way you would if you started working with us and this was your first day -- that is, feel free to ask questions as much as you want. We will set up a slack channel for you to ask questions and interact with us. This is quite similar to the type of task we would assign a new hire on their first day, in fact.
+Treat this the same way you would if you started working with us and this was your first day -- that is, feel free to ask as many questions as you want. We will set up a slack channel for you to ask questions and interact with us. This is quite similar to the type of task we would assign a new hire on their first day, in fact.
 
 We expect this to be done within a day - if you are approaching 8 hours, you can just stop where you are and we'll continue on with the evaluation.
 
@@ -39,15 +39,17 @@ somePage.getInitialProps = async () => {
 export default somePage
 ```
 
-You'll see a similar template provided in the `pages/tao` folder, which is working out of the box.
+You'll see a similar template provided in the `pages/tao-of-hashicorp` folder, which is working out of the box.
 
-Our CMS, [DatoCMS](), exposes a public GraphQL API to our data which [you can explore here using GraphiQL](https://cda-explorer.datocms.com/?apitoken=78d2968c99a076419fbb&query=query%20Tao%20%7B%0A%20%20pageData%3A%20templatePage%28filter%3A%20%7B%20id%3A%20%7B%20eq%3A%2085309%20%7D%20%7D%20%29%20%7B%0A%20%20%20%20slug%0A%20%20%7D%0A%7D&operationName=Tao). We loaded up the same query as you have in the `tao` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
+Our CMS, [DatoCMS](https://www.datocms.com/), exposes a public GraphQL API to our data which [you can explore here using GraphiQL](https://cda-explorer.datocms.com/?apitoken=78d2968c99a076419fbb&query=query%20Tao%20%7B%0A%20%20pageData%3A%20templatePage%28filter%3A%20%7B%20id%3A%20%7B%20eq%3A%2085309%20%7D%20%7D%20%29%20%7B%0A%20%20%20%20slug%0A%20%20%7D%0A%7D&operationName=Tao). We loaded up the same query as you have in the `tao-of-hashicorp` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
 
 ### Building The Page
 
-Once you have the data, the next step is to build out the page! There's no interactivity on this page, so it will be a pure markup-based challenge here. We expect the markup to be clear and semantic, and the styling to be clear, well-structured, and good-looking. Do your best to match the styling on the existing page. Feel free to build out components as part of the page to reduce repetition and break out reasonable chunks of code. The `components` folder can be a home to them.
+Once you have the data, the next step is to build out the page! There's no interactivity on this page, so it will be a pure markup-based challenge here. We expect the markup to be clear and semantic, and the styling to be clear, well-structured, and good-looking. Do your best to visually match the styling on the existing page. Feel free to build out components as part of the page to reduce repetition and break out reasonable chunks of code. The `components` folder can be a home to them.
 
-All images on the page can be retrieved from the CMS via URLs from the graphql query. And we expect the page to be styled responsively so it looks great on both mobile and desktop. Also when you click the link below, you might not see styles load initially. A quick refresh will fix this for the rest of the run.
+You may have also discovered that we have a library of components under the `@hashicorp` scope on npm. We do not want or expect you to use these components, and attempting to do so will only slow you down in this instance, as they are built for a different build system. You should build all the components you need for this page on your own, within this project.
+
+All images on the page can be retrieved from the CMS via URLs from the graphql query. And we expect the page to be styled responsively so it looks great on both mobile and desktop. Also when you click the link below, you might not see styles load initially. A quick refresh will fix this for the rest of the run (nextjs bug, we're working on it!)
 
 <Link href="/tao-of-hashicorp">
   <a>&raquo; Here's the page!</a>
