@@ -1,5 +1,5 @@
 import './style.css'
-import Content from '@hashicorp/hashi-content'
+import Content from '@hashicorp/react-content'
 
 export default function LayoutWrapper() {
   return function MdxPageLayout({ children }) {

@@ -10,12 +10,12 @@ We expect this to be done within a day - if you are approaching 8 hours, you can
 
 ### Fetching Data
 
-This project uses [Next.js](https://nextjs.org), a react-based framework that can generate static or dynamic websites. We have a tool called `next-hashicorp` layered into the config that provides several utilities, especially helpful for loading remote data.
+This project uses [Next.js](https://nextjs.org), a react-based framework that can generate static or dynamic websites. We have a tool called `nextjs-scripts` layered into the config that provides several utilities, especially helpful for loading remote data.
 
-The data for this project can be fetched from our CMS, `next-hashicorp` exports a function that allows you to easily fetch the data. An example might look something like this:
+The data for this project can be fetched from our CMS, `nextjs-scripts` exports a function that allows you to easily fetch the data. An example might look something like this:
 
 ```js
-import { fetch } from '@hashicorp/next-hashicorp/dato/client'
+import { fetch } from '@hashicorp/nextjs-scripts/dato/client'
 import someQuery from './query.graphql'
 
 fetch({ query: someQuery }).then(console.log)
@@ -24,7 +24,7 @@ fetch({ query: someQuery }).then(console.log)
 Next.js [conventions](https://nextjs.org/learn/basics/fetching-data-for-pages), however, dictate that a property called `getInitialProps` can be added to any component within the `pages` directory, which is an async function that will be executed before the component mounts, passing the returned object into the component as props. So, within this project, your initial data fetch might look something like this:
 
 ```js
-import { fetch } from '@hashicorp/next-hashicorp/dato/client'
+import { fetch } from '@hashicorp/nextjs-scripts/dato/client'
 import someQuery from './query.graphql'
 
 function somePage({ queryResult }) {

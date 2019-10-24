@@ -1,4 +1,4 @@
-const defineDynamicRoutes = require('@hashicorp/next-hashicorp/routes/dynamic')
+const defineDynamicRoutes = require('@hashicorp/nextjs-scripts/routes/dynamic')
 
 const routes = []
 
