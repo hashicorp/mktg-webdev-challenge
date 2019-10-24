@@ -1,6 +1,6 @@
-@import '@hashicorp/hashi-nav/dist/style.css';
-@import '@hashicorp/hashi-footer/dist/style.css';
-@import '@hashicorp/hashi-newsletter-signup-form/dist/style.css';
-@import '@hashicorp/hashi-button/dist/style.css';
-@import '@hashicorp/hashi-text-input/dist/style.css';
-@import '@hashicorp/hashi-checkbox-input/dist/style.css';
+@import '@hashicorp/react-nav/dist/style.css';
+@import '@hashicorp/react-footer/dist/style.css';
+@import '@hashicorp/react-newsletter-signup-form/dist/style.css';
+@import '@hashicorp/react-button/dist/style.css';
+@import '@hashicorp/react-text-input/dist/style.css';
+@import '@hashicorp/react-checkbox-input/dist/style.css';

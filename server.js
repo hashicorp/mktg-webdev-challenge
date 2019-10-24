@@ -1,6 +1,6 @@
 const next = require('next')
 const express = require('express')
-const defineDynamicRoutes = require('@hashicorp/next-hashicorp/routes/dynamic')
+const defineDynamicRoutes = require('@hashicorp/nextjs-scripts/routes/dynamic')
 const rawRoutes = require('./routes')
 const routes = defineDynamicRoutes(rawRoutes)
 
@@ -9,7 +9,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handler = routes.getRequestHandler(app)
 
-// TODO: this should be extracted into next-hashicorp's binary
+// TODO: this should be extracted into nextjs-scripts's binary
 app.prepare().then(() => {
   const server = express()
   // serve static files from '/assets'

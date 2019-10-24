@@ -1,5 +1,5 @@
-const withHashicorp = require('@hashicorp/next-hashicorp')
-const defineStaticRoutes = require('@hashicorp/next-hashicorp/routes/static')
+const withHashicorp = require('@hashicorp/nextjs-scripts')
+const defineStaticRoutes = require('@hashicorp/nextjs-scripts/routes/static')
 const routes = require('./routes')
 
 module.exports = withHashicorp({

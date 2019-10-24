@@ -1,13 +1,13 @@
 import './style.css'
-import Nav from '@hashicorp/hashi-nav'
-import Footer from '@hashicorp/hashi-footer'
+import Nav from '@hashicorp/react-nav'
+import Footer from '@hashicorp/react-footer'
 
-function Layout({ children, globalFooter, globalNavigation }) {
+function Layout({ children }) {
   return (
     <>
-      <Nav data={globalNavigation} />
+      <Nav />
       <main>{children}</main>
-      <Footer data={globalFooter} />
+      <Footer />
     </>
   )
 }

@@ -1,4 +1,4 @@
-@import '@hashicorp/hashi-global-styles/style.css';
+@import '@hashicorp/react-global-styles/style.css';
 
 a {
   cursor: pointer;

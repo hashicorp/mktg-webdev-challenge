@@ -1,15 +1,14 @@
 import './style.css'
 import query from './query.graphql'
-import { fetch } from '@hashicorp/next-hashicorp/dato/client'
-import EmailSubscribe from '@hashicorp/hashi-email-subscribe'
-import SecondaryNav from '@hashicorp/hashi-secondary-nav'
-import secondaryNavFragment from '@hashicorp/hashi-secondary-nav/fragment.graphql'
+import { fetch } from '@hashicorp/nextjs-scripts/dato/client'
+import EmailSubscribe from '@hashicorp/react-email-subscribe'
+import SecondaryNav from '@hashicorp/react-secondary-nav'
 
-function TaoOfHashicorpPage({ pageData, secondaryNav, currentPage }) {
+function TaoOfHashicorpPage({ pageData, globalNavigation, currentPage }) {
   return (
     <>
       <SecondaryNav
-        data={secondaryNav.companyLinks}
+        data={globalNavigation.companyLinks}
         page={currentPage}
         dark={true}
       />
@@ -22,11 +21,11 @@ function TaoOfHashicorpPage({ pageData, secondaryNav, currentPage }) {
 }
 
 TaoOfHashicorpPage.getInitialProps = async ({ asPath }) => {
-  const { pageData, secondaryNav } = await fetch({
+  const { pageData, globalNavigation } = await fetch({
     query,
-    fragments: [secondaryNavFragment]
+    dependencies: [SecondaryNav]
   })
-  return { pageData, secondaryNav, currentPage: asPath }
+  return { pageData, globalNavigation, currentPage: asPath }
 }
 
 TaoOfHashicorpPage.layout = true
