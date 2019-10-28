@@ -1,9 +1,10 @@
+# See https://cda-explorer.datocms.com/?apitoken=78d2968c99a076419fbb&query=query%20People%20%7B%0A%20%20allPeople%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D&operationName=People
+# to work with this query in the explorer
+#
+# Documentation on Dato's API is at: https://www.datocms.com/docs/content-delivery-api
+
 query People {
   allPeople(first: 100) {
     name
-    # See https://cda-explorer.datocms.com/?apitoken=78d2968c99a076419fbb&query=query%20People%20%7B%0A%20%20allPeople%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D&operationName=People
-    # to work with this query in the explorer
-    #
-    # Documentation on Dato's API is at: https://www.datocms.com/docs/content-delivery-api
   }
 }

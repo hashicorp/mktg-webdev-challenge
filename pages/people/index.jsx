@@ -11,12 +11,9 @@ function PeoplePage({ allPeople }) {
 }
 
 PeoplePage.getInitialProps = async () => {
-  const { allPeople } = await fetch({
-    query
-  })
+  const { allPeople } = await fetch({ query })
   return { allPeople }
 }
 
 PeoplePage.layout = true
-
 export default PeoplePage
