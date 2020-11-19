@@ -1,7 +1,9 @@
 /* your styles here! */
+
 /* you can use standard css plus anything from postcss-preset-env */
+
 /* ref: https://preset-env.cssdb.org/ */
 
-.my-data {
+.myData {
   color: yellow;
 }

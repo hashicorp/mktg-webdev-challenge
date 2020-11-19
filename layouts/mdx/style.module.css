@@ -1,0 +1,14 @@
+:root {
+  --highlight-color: var(--brand);
+}
+
+.intro {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.g-content img {
+  width: 50%;
+  display: block;
+  margin: 50px auto;
+}

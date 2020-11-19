@@ -1,42 +1,35 @@
 import React from 'react'
 import './style.css'
-import App from 'next/app'
-import NProgress from 'nprogress'
+import '@hashicorp/nextjs-scripts/lib/nprogress/style.css'
+
+import NProgress from '@hashicorp/nextjs-scripts/lib/nprogress'
 import Router from 'next/router'
 import Layout from '../layouts/hashicorp'
 
-Router.events.on('routeChangeStart', url => {
-  console.log(`Loading: ${url}`)
-  NProgress.start()
-})
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
+NProgress({ Router })
 
-class NextApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {}
-
-    // Execute the component's `getInitialProps` function
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return { pageProps }
-  }
-
-  render() {
-    const { Component, pageProps } = this.props
-    // If the component asks for a layout, wrap it with the layout. Otherwise use a fragment.
-    const LayoutWrapper = Component.layout ? Layout : React.Fragment
-
-    return (
-      <>
-        <LayoutWrapper>
-          <Component {...pageProps} />
-        </LayoutWrapper>
-      </>
-    )
-  }
+function App({ Component, pageProps }) {
+  const AppLayout = Component.layout ? Layout : React.Fragment
+  return (
+    <AppLayout>
+      <Component {...pageProps} />
+    </AppLayout>
+  )
 }
 
-export default NextApp
+App.getInitialProps = async ({ Component, ctx }) => {
+  let pageProps = {}
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx)
+  } else if (Component.isMDXComponent) {
+    // fix for https://github.com/mdx-js/mdx/issues/382
+    const mdxLayoutComponent = Component({}).props.originalType
+    if (mdxLayoutComponent.getInitialProps) {
+      pageProps = await mdxLayoutComponent.getInitialProps(ctx)
+    }
+  }
+
+  return { pageProps }
+}
+
+export default App

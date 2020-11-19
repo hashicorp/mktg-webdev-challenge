@@ -1,22 +1,10 @@
-@import '@hashicorp/react-global-styles/style.css';
+@import '~@hashicorp/react-global-styles/style.css';
+@import '~@hashicorp/react-nav/dist/style.css';
+@import '~@hashicorp/react-footer/dist/style.css';
+@import '~@hashicorp/react-newsletter-signup-form/dist/style.css';
+@import '~@hashicorp/react-button/styles/index.css';
+@import '~@hashicorp/react-text-input/dist/style.css';
+@import '~@hashicorp/react-checkbox-input/style.css';
+@import '~@hashicorp/react-content/style.css';
 
-a {
-  cursor: pointer;
-}
-
-/* Web Fonts */
-@font-face {
-  font-family: 'klavika-web';
-  src: url('/static/fonts/klavika/300.woff2') format('woff2'),
-    url('/static/fonts/klavika/300.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'klavika-web';
-  src: url('/static/fonts/klavika/500.woff2') format('woff2'),
-    url('/static/fonts/klavika/500.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
+/* Global styles here */
