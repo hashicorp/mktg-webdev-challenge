@@ -124,8 +124,11 @@ module.exports = async client => {
       `${AVATAR_URL}${i < 50 ? 'men' : 'women'}/${randomAvatarNumber}.jpg`
     )
     const name = faker.name.findName()
+    // Some records we don't want to have an avatar, this gives us a small percentage of
+    // people who are missing one.
+    const skipAvatar = randomAvatarNumber % 7 === 0
     console.log(`Created person number ${i}`)
-    if (randomAvatarNumber % 7 === 0) {
+    if (skipAvatar) {
       console.log(
         `Person ${name} shouldn't have an avatar. Value: ${randomAvatarNumber}`
       )
@@ -136,8 +139,7 @@ module.exports = async client => {
       name,
       title: faker.name.jobTitle(),
       department: createdDepartments[randomDeptNumber].id,
-      // Some records we don't have to have an avatar
-      avatar: randomAvatarNumber % 7 != 0 ? { uploadId: upload.id } : null
+      avatar: skipAvatar ? null : { uploadId: upload.id }
     })
   }
 }
