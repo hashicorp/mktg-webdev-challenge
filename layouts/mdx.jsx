@@ -13,5 +13,3 @@ export default function MDXLayout({ children }) {
     </MDXProvider>
   )
 }
-
-MDXLayout.getInitialProps = ({ asPath }) => ({ path: asPath })
