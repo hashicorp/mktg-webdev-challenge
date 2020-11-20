@@ -12,7 +12,7 @@
     "@hashicorp/react-nav": "^2.2.0",
     "@hashicorp/react-secondary-nav": "^2.0.2",
     "@hashicorp/react-section-header": "^1.1.0",
-    "faker": "^5.1.0",
+    "faker": "5.1.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.0.0",
