@@ -1,8 +1,7 @@
-import './style.css'
 import Nav from '@hashicorp/react-nav'
 import Footer from '@hashicorp/react-footer'
 
-function Layout({ children }) {
+export default function Layout({ children }) {
   return (
     <>
       <Nav />
@@ -11,5 +10,3 @@ function Layout({ children }) {
     </>
   )
 }
-
-export default Layout

@@ -1,19 +1,23 @@
-import './style.css'
+import style from './style.module.css'
 import query from './query.graphql'
-import { fetch } from '@hashicorp/nextjs-scripts/dato/client'
+import rivetQuery from '@hashicorp/nextjs-scripts/dato/client'
 
-function PeoplePage({ allPeople }) {
+function PeoplePage({ allPeople, allDepartments }) {
   return (
     <>
-      <pre className="my-data">{JSON.stringify(allPeople, null, 2)}</pre>
+      <pre className={style.myData}>{JSON.stringify(allPeople, null, 2)}</pre>
+      <pre className={style.myData}>
+        {JSON.stringify(allDepartments, null, 2)}
+      </pre>
     </>
   )
 }
 
-PeoplePage.getInitialProps = async () => {
-  const { allPeople } = await fetch({ query })
-  return { allPeople }
+export async function getStaticProps() {
+  const data = await rivetQuery({ query })
+  return { props: data }
 }
 
 PeoplePage.layout = true
+
 export default PeoplePage
