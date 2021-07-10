@@ -37,16 +37,14 @@ Next.js [conventions](https://nextjs.org/learn/basics/fetching-data-for-pages) d
 import rivetQuery from '@hashicorp/nextjs-scripts/dato/client'
 import someQuery from './query.graphql'
 
-export default function somePage({ queryResult }) {
-  return <p>{JSON.stringify(queryResult)}</p>
+export default function somePage({ data }) {
+  return <p>{JSON.stringify(data)}</p>
 }
 
 export async function getStaticProps() {
-  const data = await rivetQuery({ query })
-  return { props: queryResult }
+  const data = await rivetQuery({ someQuery })
+  return { props: { data } }
 }
-
-export default somePage
 ```
 
 You'll see a similar template provided in the `pages/people` folder, which is working out of the box.
