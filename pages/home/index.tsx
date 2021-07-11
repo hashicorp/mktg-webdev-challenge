@@ -16,7 +16,7 @@ export default function IndexPage({ mdxSource }) {
 
 export async function getStaticProps() {
   const source = fs.readFileSync(
-    path.join(process.cwd(), 'content/index.mdx'),
+    path.join(process.cwd(), 'pages/home/content.mdx'),
     'utf8'
   )
   const mdxSource = await serialize(source, { mdxOptions: markdownDefaults() })

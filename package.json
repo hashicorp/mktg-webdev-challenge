@@ -6,12 +6,8 @@
   "dependencies": {
     "@hashicorp/mktg-global-styles": "^3.1.0",
     "@hashicorp/nextjs-scripts": "19.0.3",
-    "@hashicorp/react-content": "7.0.1",
-    "@hashicorp/react-email-subscribe": "2.1.8",
     "@hashicorp/react-footer": "3.3.4",
     "@hashicorp/react-nav": "3.0.4",
-    "@hashicorp/react-secondary-nav": "2.1.1",
-    "@hashicorp/react-section-header": "5.0.2",
     "faker": "5.5.3",
     "next": "10.2.3",
     "next-mdx-remote": "^3.0.2",
@@ -21,7 +17,6 @@
   "devDependencies": {
     "@types/react": "^17.0.14",
     "husky": "4.2.5",
-    "inquirer": "^7.0.0",
     "prettier": "2.3.2"
   },
   "husky": {
@@ -29,7 +24,6 @@
       "pre-commit": "next-hashicorp precommit"
     }
   },
-  "main": "index.js",
   "scripts": {
     "build": "next build",
     "format": "next-hashicorp format",

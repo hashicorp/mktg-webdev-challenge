@@ -1,4 +1,4 @@
-// A big, silly button component to serve as an example of a component
+// A basic button to serve as an example of a component
 // and also to bring you from the instructions page to the template!
 
 import s from './style.module.css'
