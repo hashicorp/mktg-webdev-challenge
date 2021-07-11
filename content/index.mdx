@@ -13,36 +13,37 @@ Use [this Figma file](https://www.figma.com/file/xGicP4qkXbMhte4LAYxC4X/Untitled
   allowFullScreen
 ></iframe>
 
-There are definitely some parts of this that are a little ambiguous, which is how real world projects always work. Treat this the same way you would if you started working with us and this was your first day — this is quite similar to the type of task we would assign a new hire on their first day, in fact. We will set up a slack channel for you to ask questions, get clarification, and collaborate with us in general, and we strongly encourage you to take advantage of this.
+There are definitely some parts of this that are a little ambiguous, which is how real world projects always work. Treat this the same way you would if you started working with us and this was your first day — this is quite similar to the type of task we would assign a new hire on their first day. We will set up a slack channel for you to ask questions, get clarification, and collaborate with us in general, and we strongly encourage you to take advantage of this.
 
 We expect this to be done within a day or two's worth of full-time work - about 8 - 14 hours. We know that you likely have other commitments, and so we generally look at about week for candidates to complete the challenge. If you're approaching 14 hours of total time spent, just stop where you are and we'll complete the evaluation based on what you have done.
 
 ### Fetching Data
 
-This project uses [Next.js](https://nextjs.org), a react-based framework that generates performant websites that blur the lines between static and dynamically rendered pages. We have an internal tool called `nextjs-scripts` layered into the config that provides several utilities, and is especially helpful for loading remote data.
+This project uses [Next.js](https://nextjs.org), a react-based framework that generates performant websites that blur the lines between static and dynamic rendering. We have an internal tool called `nextjs-scripts` layered into the config that provides several utilities, and is especially helpful for loading remote data.
 
 The data for this project can be fetched from our CMS, [DatoCMS](https://www.datocms.com/), `nextjs-scripts` exports a function that allows you to easily fetch the data. An example might look something like this:
 
-```js
+```jsx
+// this is called rivet because it wraps this a library called "rivet-graphql"
 import rivetQuery from '@hashicorp/nextjs-scripts/dato/client'
 // nextjs-scripts configures ".graphql" files to be imported as plain text
-import someQuery from './query.graphql'
+import query from './query.graphql'
 
-rivetQuery({ query: someQuery }).then(console.log)
+rivetQuery({ query }).then(console.log)
 ```
 
 Next.js [conventions](https://nextjs.org/learn/basics/fetching-data-for-pages) dictate that an async function called `getStaticProps` can be exported along with any component within the `pages` directory. This function will be executed before the component mounts, passing the returned object into the component as props. So, within this project, your initial data fetch might look something like this:
 
 ```js
 import rivetQuery from '@hashicorp/nextjs-scripts/dato/client'
-import someQuery from './query.graphql'
+import query from './query.graphql'
 
 export default function somePage({ data }) {
   return <p>{JSON.stringify(data)}</p>
 }
 
 export async function getStaticProps() {
-  const data = await rivetQuery({ someQuery })
+  const data = await rivetQuery({ query })
   return { props: { data } }
 }
 ```
