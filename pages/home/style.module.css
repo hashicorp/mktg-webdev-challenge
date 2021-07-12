@@ -1,0 +1,43 @@
+.root {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 0 25px;
+  font-size: 17px;
+
+  & iframe {
+    max-width: 100%;
+  }
+
+  & p {
+    line-height: 1.8em;
+    color: #252525;
+  }
+
+  & h1 {
+    font-size: 2.3rem;
+  }
+
+  & a:not(:global(.button)) {
+    font-weight: 600;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.25s ease;
+
+    &:hover {
+      border-bottom: 1px solid var(--brand);
+    }
+  }
+
+  & p > code {
+    background: #eee;
+    color: #af4040;
+    padding: 3px 5px;
+    border-radius: 2px;
+  }
+
+  /* our markdown processing defaults add a permalink anchor element
+     just hiding it for this simple page */
+  & :global(.__permalink-h) {
+    display: none;
+  }
+}

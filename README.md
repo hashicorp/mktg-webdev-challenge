@@ -2,6 +2,8 @@
 
 Run `npm install` then `npm start`, and visit `http://localhost:3000` for instructions.
 
+> Note: We have not yet upgraded this project to `next@11` - there are some adjustments we need to make to our tooling before we run this upgrade.
+
 ## Submitting Your Work
 
 Please **do not submit a pull request to, or open any issues in this repo**. This is a template repository only. To submit your challenge, hit the "use this template" button on github to create a copy of it for yourself and Grant access to `kylemac`, `mwickett`, and `jescalan` as collaborators. All your work should be done on your copy of the repo only.

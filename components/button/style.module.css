@@ -1,0 +1,16 @@
+.root {
+  background: var(--brand);
+  color: white;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+  display: inline-block;
+  transition: background 0.25s ease;
+  margin: 25px 0; /* normally this would not be here */
+
+  &:hover {
+    background: #3c7dff;
+  }
+}

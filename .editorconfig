@@ -11,8 +11,5 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
 
-[Makefile]
-indent_style = tab
-
 [{*.md,*.json}]
 max_line_length = null
