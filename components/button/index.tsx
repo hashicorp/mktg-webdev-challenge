@@ -3,7 +3,15 @@
 
 import s from './style.module.css'
 
-export default function Button({ children, href }) {
+export interface ButtonProps {
+  href: string
+  children: React.ReactChildren
+}
+
+export default function Button({
+  children,
+  href,
+}: ButtonProps): React.ReactElement {
   return (
     <a className={`button ${s.root}`} href={href}>
       {children}

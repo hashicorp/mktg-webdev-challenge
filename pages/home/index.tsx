@@ -1,12 +1,17 @@
 import fs from 'fs'
 import path from 'path'
 import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { GetStaticPropsResult } from 'next'
 import markdownDefaults from '@hashicorp/nextjs-scripts/markdown'
 import Button from 'components/button'
 import s from './style.module.css'
 
-export default function IndexPage({ mdxSource }) {
+interface Props {
+  mdxSource: MDXRemoteSerializeResult
+}
+
+export default function IndexPage({ mdxSource }: Props): React.ReactElement {
   return (
     <main className={s.root}>
       <MDXRemote {...mdxSource} components={{ Button }} />
@@ -14,7 +19,7 @@ export default function IndexPage({ mdxSource }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
   const source = fs.readFileSync(
     path.join(process.cwd(), 'pages/home/content.mdx'),
     'utf8'

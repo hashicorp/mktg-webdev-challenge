@@ -24,19 +24,19 @@ const DEPARTMENTS = [
   'Quality Assurance',
   'Workplace',
   'Sanitation',
-  'Recruiting'
+  'Recruiting',
 ]
 
 // https://randomuser.me/api/portraits/men/54.jpg
 const AVATAR_URL = `https://randomuser.me/api/portraits/`
 
-module.exports = async client => {
+module.exports = async (client) => {
   // Create new models & fields
   // Department
   const departmentModel = await client.itemTypes.create({
     name: 'Department',
     apiKey: 'department',
-    tree: true
+    tree: true,
   })
 
   await client.fields.create(departmentModel.id, {
@@ -44,21 +44,21 @@ module.exports = async client => {
     apiKey: 'name',
     fieldType: 'string',
     validators: {
-      required: {}
+      required: {},
     },
     appearance: {
       editor: 'single_line',
       parameters: {
-        heading: true
+        heading: true,
       },
-      addons: []
-    }
+      addons: [],
+    },
   })
 
   // Person
   const personModel = await client.itemTypes.create({
     name: 'Person',
-    apiKey: 'person'
+    apiKey: 'person',
   })
 
   await client.fields.create(personModel.id, {
@@ -68,22 +68,22 @@ module.exports = async client => {
     appearance: {
       editor: 'single_line',
       parameters: {
-        heading: true
+        heading: true,
       },
-      addons: []
-    }
+      addons: [],
+    },
   })
 
   await client.fields.create(personModel.id, {
     label: 'Title',
     apiKey: 'title',
-    fieldType: 'string'
+    fieldType: 'string',
   })
 
   await client.fields.create(personModel.id, {
     label: 'Avatar',
     apiKey: 'avatar',
-    fieldType: 'file'
+    fieldType: 'file',
   })
 
   await client.fields.create(personModel.id, {
@@ -92,16 +92,16 @@ module.exports = async client => {
     fieldType: 'link',
     validators: {
       itemItemType: {
-        itemTypes: [departmentModel.id]
-      }
-    }
+        itemTypes: [departmentModel.id],
+      },
+    },
   })
 
   // Populate records for departments
-  const createDepartments = DEPARTMENTS.map(async dept => {
+  const createDepartments = DEPARTMENTS.map(async (dept) => {
     return await client.items.create({
       itemType: departmentModel.id,
-      name: dept
+      name: dept,
     })
   })
 
@@ -139,7 +139,7 @@ module.exports = async client => {
       name,
       title: faker.name.jobTitle(),
       department: createdDepartments[randomDeptNumber].id,
-      avatar: skipAvatar ? null : { uploadId: upload.id }
+      avatar: skipAvatar ? null : { uploadId: upload.id },
     })
   }
 }
