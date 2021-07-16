@@ -6,11 +6,12 @@
   "dependencies": {
     "@hashicorp/mktg-global-styles": "^3.1.0",
     "@hashicorp/nextjs-scripts": "19.0.3",
+    "@hashicorp/platform-nextjs-plugin": "^0.1.0",
     "@hashicorp/react-footer": "3.3.4",
     "@hashicorp/react-nav": "3.0.4",
     "faker": "5.5.3",
     "next": "10.2.3",
-    "next-mdx-remote": "^3.0.2",
+    "next-mdx-remote": "^3.0.4",
     "react": "16.14.0",
     "react-dom": "16.14.0"
   },

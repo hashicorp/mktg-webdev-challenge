@@ -1,10 +1,20 @@
 import Nav from '@hashicorp/react-nav'
 import Footer from '@hashicorp/react-footer'
+import rivetQuery from '@hashicorp/nextjs-scripts/dato/client'
+import { GetStaticPropsResult } from 'next'
+import { PersonRecord, DepartmentRecord } from 'types'
 import style from './style.module.css'
 import query from './query.graphql'
-import rivetQuery from '@hashicorp/nextjs-scripts/dato/client'
 
-export default function PeoplePage({ allPeople, allDepartments }) {
+interface Props {
+  allPeople: PersonRecord[]
+  allDepartments: DepartmentRecord[]
+}
+
+export default function PeoplePage({
+  allPeople,
+  allDepartments,
+}: Props): React.ReactElement {
   return (
     <>
       <Nav />
@@ -19,7 +29,7 @@ export default function PeoplePage({ allPeople, allDepartments }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
   const data = await rivetQuery({ query })
   return { props: data }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { AppProps } from 'next/app'
 import './style.css'
 import '@hashicorp/nextjs-scripts/lib/nprogress/style.css'
 
@@ -7,7 +8,7 @@ import Router from 'next/router'
 
 NProgress({ Router })
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps): React.ReactElement {
   return <Component {...pageProps} />
 }
 
