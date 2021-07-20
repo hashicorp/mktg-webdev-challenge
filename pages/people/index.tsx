@@ -1,6 +1,6 @@
 import Nav from '@hashicorp/react-nav'
 import Footer from '@hashicorp/react-footer'
-import rivetQuery from '@hashicorp/nextjs-scripts/dato/client'
+import rivetQuery from '@hashicorp/platform-cms'
 import { GetStaticPropsResult } from 'next'
 import { PersonRecord, DepartmentRecord } from 'types'
 import style from './style.module.css'

@@ -1,6 +1,6 @@
-const eslintConfig = require('@hashicorp/nextjs-scripts/.eslintrc.js')
+const eslintConfig = require('@hashicorp/platform-cli/config/.eslintrc.js')
 module.exports = {
-  ...eslintConfig
+  ...eslintConfig,
   /* Specify overrides here */
-  /* For reference: https://github.com/hashicorp/nextjs-scripts/blob/master/config/.eslintrc.js */
+  /* For reference: https://github.com/hashicorp/nextjs-scripts/blob/main/packages/cli/config/.eslintrc.js */
 }
