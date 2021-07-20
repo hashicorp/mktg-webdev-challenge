@@ -1,10 +1,9 @@
 @import '~@hashicorp/mktg-global-styles/style.css';
-@import '~@hashicorp/nextjs-scripts/prism/style.css';
+@import '~@hashicorp/platform-code-highlighting/style.css';
 
 @import '~@hashicorp/react-nav/dist/style.css';
 @import '~@hashicorp/react-footer/dist/style.css';
 @import '~@hashicorp/react-newsletter-signup-form/dist/style.css';
-@import '~@hashicorp/react-button/styles/index.css';
 @import '~@hashicorp/react-text-input/dist/style.css';
 @import '~@hashicorp/react-checkbox-input/style.css';
 

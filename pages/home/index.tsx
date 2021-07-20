@@ -3,7 +3,7 @@ import path from 'path'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { GetStaticPropsResult } from 'next'
-import markdownDefaults from '@hashicorp/nextjs-scripts/markdown'
+import markdownDefaults from '@hashicorp/platform-markdown-utils'
 import Button from 'components/button'
 import s from './style.module.css'
 

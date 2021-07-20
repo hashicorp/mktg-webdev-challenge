@@ -1,9 +1,9 @@
 import React from 'react'
 import { AppProps } from 'next/app'
 import './style.css'
-import '@hashicorp/nextjs-scripts/lib/nprogress/style.css'
+import '@hashicorp/platform-util/nprogress/style.css'
 
-import NProgress from '@hashicorp/nextjs-scripts/lib/nprogress'
+import NProgress from '@hashicorp/platform-util/nprogress'
 import Router from 'next/router'
 
 NProgress({ Router })
