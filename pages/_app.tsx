@@ -8,8 +8,19 @@ import Router from 'next/router'
 
 NProgress({ Router })
 
-function App({ Component, pageProps }: AppProps): React.ReactElement {
-  return <Component {...pageProps} />
+const EmptyLayout = ({ children }) => children
+
+interface HashiAppProps extends AppProps {
+  Component: AppProps['Component'] & { layout?: React.ComponentType }
+}
+
+function App({ Component, pageProps }: HashiAppProps): React.ReactElement {
+  const Layout = Component.layout ?? EmptyLayout
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 export default App

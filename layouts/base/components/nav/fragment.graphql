@@ -1,0 +1,79 @@
+fragment navFields on NavRecord {
+  infrastructureProducts {
+    ...product
+  }
+  securityProducts {
+    ...product
+  }
+  networkingProducts {
+    ...product
+  }
+  applicationProducts {
+    ...product
+  }
+  hcpDescription
+  hcpProducts {
+    ...product
+  }
+  hcpCta {
+    title
+    url
+  }
+  productsPromos {
+    ...internal_Promos
+  }
+  solutionsNav {
+    ...nav_item
+  }
+  solutionsPromos {
+    ...internal_Promos
+  }
+  companyNav {
+    ...nav_item
+  }
+  companyPromos {
+    ...internal_Promos
+  }
+  learnNav {
+    ...nav_item
+  }
+  learnPromos {
+    ...internal_Promos
+  }
+  supportNav {
+    ...nav_item
+  }
+  supportPromos {
+    ...internal_Promos
+  }
+}
+
+fragment product on NavProductRecord {
+  url
+  product
+  badge
+}
+
+fragment nav_item on NavItemRecord {
+  title
+  navItems {
+    title
+    url
+    badge
+    external
+  }
+  navCta {
+    title
+    url
+  }
+}
+
+fragment internal_Promos on NavPromoRecord {
+  image {
+    ...imageFields
+  }
+  linkUrl
+  linkTitle
+  theme
+  title
+}
