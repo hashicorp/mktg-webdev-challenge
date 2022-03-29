@@ -661,7 +661,7 @@ function Nav({
             </NavItem>
             <li className="pricing">
               <a
-                href="/contact-sales"
+                href="https://www.hashicorp.com/contact-sales"
                 onClick={() => {
                   if (window && window.analytics) {
                     window.analytics.track('CTA Clicked', {

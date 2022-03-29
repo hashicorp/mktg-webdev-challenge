@@ -109,7 +109,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
                 >
                   <div className="product-icon">
                     <Image
-                      src="/img/flight-icons/terraform-color-16.svg"
+                      src={require('@hashicorp/flight-icons/svg/terraform-color-16.svg')}
                       alt=""
                       height={16}
                       width={16}
@@ -125,7 +125,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
               >
                 <div className="product-icon">
                   <Image
-                    src="/img/flight-icons/packer-color-16.svg"
+                    src={require('@hashicorp/flight-icons/svg/packer-color-16.svg')}
                     alt=""
                     height={16}
                     width={16}
@@ -140,7 +140,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
                 <a className="product-link" data-ga-footer="Solutions | Consul">
                   <div className="product-icon">
                     <Image
-                      src="/img/flight-icons/consul-color-16.svg"
+                      src={require('@hashicorp/flight-icons/svg/consul-color-16.svg')}
                       alt=""
                       height={16}
                       width={16}
@@ -156,7 +156,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
                 <a className="product-link" data-ga-footer="Solutions | Vault">
                   <div className="product-icon">
                     <Image
-                      src="/img/flight-icons/vault-color-16.svg"
+                      src={require('@hashicorp/flight-icons/svg/vault-color-16.svg')}
                       alt=""
                       height={16}
                       width={16}
@@ -172,7 +172,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
               >
                 <div className="product-icon">
                   <Image
-                    src="/img/flight-icons/boundary-color-16.svg"
+                    src={require('@hashicorp/flight-icons/svg/boundary-color-16.svg')}
                     alt=""
                     height={16}
                     width={16}
@@ -187,7 +187,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
                 <a className="product-link" data-ga-footer="Solutions | Nomad">
                   <div className="product-icon">
                     <Image
-                      src="/img/flight-icons/nomad-color-16.svg"
+                      src={require('@hashicorp/flight-icons/svg/nomad-color-16.svg')}
                       alt=""
                       height={16}
                       width={16}
@@ -203,7 +203,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
               >
                 <div className="product-icon">
                   <Image
-                    src="/img/flight-icons/waypoint-color-16.svg"
+                    src={require('@hashicorp/flight-icons/svg/waypoint-color-16.svg')}
                     alt=""
                     height={16}
                     width={16}
@@ -218,7 +218,7 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
               >
                 <div className="product-icon">
                   <Image
-                    src="/img/flight-icons/vagrant-color-16.svg"
+                    src={require('@hashicorp/flight-icons/svg/vagrant-color-16.svg')}
                     alt=""
                     height={16}
                     width={16}
