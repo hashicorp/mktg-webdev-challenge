@@ -1,10 +1,7 @@
 @import '~@hashicorp/mktg-global-styles/style.css';
 @import '~@hashicorp/platform-code-highlighting/style.css';
 
-@import '~@hashicorp/react-nav/dist/style.css';
-@import '~@hashicorp/react-footer/dist/style.css';
-@import '~@hashicorp/react-newsletter-signup-form/dist/style.css';
-@import '~@hashicorp/react-text-input/dist/style.css';
-@import '~@hashicorp/react-checkbox-input/style.css';
+@import '../layouts/base/components/footer/style.css';
+@import '../layouts/base/components/nav/style.css';
 
 /* Global styles here */

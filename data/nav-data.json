@@ -1,0 +1,589 @@
+{
+  "infrastructureProducts": [
+    {
+      "url": "https://www.hashicorp.com/products/terraform",
+      "product": "Terraform",
+      "badge": ""
+    },
+    { "url": "https://www.packer.io/", "product": "Packer", "badge": "" }
+  ],
+  "securityProducts": [
+    {
+      "url": "https://www.hashicorp.com/products/vault",
+      "product": "Vault",
+      "badge": ""
+    },
+    {
+      "url": "https://boundaryproject.io/",
+      "product": "Boundary",
+      "badge": ""
+    }
+  ],
+  "networkingProducts": [
+    {
+      "url": "https://www.hashicorp.com/products/consul",
+      "product": "Consul",
+      "badge": ""
+    }
+  ],
+  "applicationProducts": [
+    {
+      "url": "https://www.hashicorp.com/products/nomad",
+      "product": "Nomad",
+      "badge": ""
+    },
+    {
+      "url": "https://waypointproject.io/",
+      "product": "Waypoint",
+      "badge": ""
+    },
+    { "url": "https://www.vagrantup.com/", "product": "Vagrant", "badge": "" }
+  ],
+  "hcpDescription": "A fully managed platform to automate infrastructure on any cloud with HashiCorp products.",
+  "hcpProducts": [
+    {
+      "url": "https://cloud.hashicorp.com/products/terraform",
+      "product": "Terraform Cloud",
+      "badge": ""
+    },
+    {
+      "url": "https://cloud.hashicorp.com/products/vault",
+      "product": "Vault",
+      "badge": ""
+    },
+    {
+      "url": "https://cloud.hashicorp.com/products/consul",
+      "product": "Consul",
+      "badge": ""
+    },
+    {
+      "url": "https://cloud.hashicorp.com/products/packer",
+      "product": "Packer",
+      "badge": ""
+    }
+  ],
+  "hcpCta": [
+    {
+      "title": "Visit cloud.hashicorp.com",
+      "url": "https://cloud.hashicorp.com/"
+    }
+  ],
+  "productsPromos": [
+    {
+      "image": {
+        "url": "https://www.datocms-assets.com/2885/1627426365-hcp.jpg",
+        "alt": "HashiCorp Cloud Platform cube",
+        "format": "jpg"
+      },
+      "linkUrl": "https://cloud.hashicorp.com/?utm_source=www&utm_content=product_main_nav",
+      "linkTitle": "Sign Up",
+      "theme": "brand",
+      "title": "Claim a $50 credit for HCP Vault or HCP Consul"
+    }
+  ],
+  "solutionsNav": [
+    {
+      "title": "Solutions",
+      "navItems": [
+        {
+          "title": "The Cloud Operating Model",
+          "url": "/cloud-operating-model",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Infrastructure provisioning",
+          "url": "/solutions/infrastructure-provisioning",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Network infrastructure automation",
+          "url": "/solutions/network-infrastructure-automation",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Cost optimization",
+          "url": "/solutions/optimize-cloud-spending",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Cloud migration",
+          "url": "/solutions/cloud-migration",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Cloud system of record",
+          "url": "/solutions/cloud-system-of-record",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Zero trust security",
+          "url": "/solutions/zero-trust-security",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Credential rotation",
+          "url": "/solutions/credential-rotation",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Encryption everywhere",
+          "url": "/solutions/encryption-everywhere",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Auditing & compliance",
+          "url": "/solutions/auditing-and-compliance",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Application delivery",
+          "url": "/solutions/modern-application-delivery",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Application networking",
+          "url": "/solutions/application-networking",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Workload orchestration",
+          "url": "/solutions/workload-orchestration",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Edge computing",
+          "url": "/solutions/edge-computing",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Kubernetes at scale",
+          "url": "/solutions/kubernetes-at-scale",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": []
+    },
+    {
+      "title": "Customer Stories",
+      "navItems": [
+        {
+          "title": "ABN AMRO",
+          "url": "/case-studies/abn-amro",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Cruise",
+          "url": "/case-studies/cruise",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Github",
+          "url": "/case-studies/github",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Mercedes-Benz",
+          "url": "/case-studies/mercedes",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Pandora",
+          "url": "/case-studies/pandora",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Roblox",
+          "url": "/case-studies/roblox",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Ubisoft",
+          "url": "/case-studies/ubisoft",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": [
+        { "title": "View all customer stories", "url": "/case-studies" }
+      ]
+    },
+    {
+      "title": "Industries",
+      "navItems": [
+        {
+          "title": "Financial services",
+          "url": "/industries/financial-services",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Healthcare",
+          "url": "/industries/healthcare",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Manufacturing",
+          "url": "/industries/manufacturing",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Media and entertainment",
+          "url": "/industries/media-and-entertainment",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Public sector",
+          "url": "/industries/public-sector",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Retail",
+          "url": "/industries/retail",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Technology",
+          "url": "/industries/technology",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": [{ "title": "Contact sales", "url": "/contact-sales" }]
+    }
+  ],
+  "solutionsPromos": [],
+  "companyNav": [
+    {
+      "title": "Company",
+      "navItems": [
+        {
+          "title": "About us",
+          "url": "/about",
+          "badge": "",
+          "external": false
+        },
+        { "title": "Jobs", "url": "/jobs", "badge": "", "external": false },
+        {
+          "title": "Our principles",
+          "url": "/our-principles",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Tao of HashiCorp",
+          "url": "/tao-of-hashicorp",
+          "badge": "",
+          "external": false
+        },
+        { "title": "Blog", "url": "/blog", "badge": "", "external": false },
+        { "title": "Press", "url": "/press", "badge": "", "external": false },
+        {
+          "title": "Investors",
+          "url": "https://ir.hashicorp.com/",
+          "badge": "New",
+          "external": false
+        },
+        {
+          "title": "Contact us",
+          "url": "/contact",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": [{ "title": "We're hiring", "url": "/jobs" }]
+    },
+    {
+      "title": "Events",
+      "navItems": [
+        {
+          "title": "HashiConf",
+          "url": "https://hashiconf.com/",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Webinars",
+          "url": "/events?type=webinar",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Workshops",
+          "url": "/events?type=workshop",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "View all events",
+          "url": "/events?type=all",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": []
+    }
+  ],
+  "companyPromos": [
+    {
+      "image": {
+        "url": "https://www.datocms-assets.com/2885/1639599753-investor-relations-nav.jpg",
+        "alt": "HashiCorp Investor Relations",
+        "format": "jpg"
+      },
+      "linkUrl": "https://ir.hashicorp.com",
+      "linkTitle": "View Investor Relations",
+      "theme": "default",
+      "title": "HashiCorp shares have begun trading on the Nasdaq"
+    },
+    {
+      "image": {
+        "url": "https://www.datocms-assets.com/2885/1627425842-webinars-workshops.jpg",
+        "alt": "A group of audience members",
+        "format": "jpg"
+      },
+      "linkUrl": "https://www.hashicorp.com/events?utm_source=www&utm_content=company_main_nav",
+      "linkTitle": "Explore events",
+      "theme": "default",
+      "title": "Discover our latest Webinars and Workshops"
+    }
+  ],
+  "learnNav": [
+    {
+      "title": "Resources",
+      "navItems": [
+        { "title": "Blog", "url": "/blog", "badge": "", "external": false },
+        {
+          "title": "Case Studies",
+          "url": "/resources?type=case-study",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Webinars",
+          "url": "/resources?type=webinar",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Whitepapers",
+          "url": "/resources?type=white-paper",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": [{ "title": "Resource Library", "url": "/resources" }]
+    },
+    {
+      "title": "",
+      "navItems": [
+        {
+          "title": "Certifications",
+          "url": "/certification",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Community",
+          "url": "/community",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Forum",
+          "url": "https://discuss.hashicorp.com/",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Demos",
+          "url": "/resources?type=demo",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Training",
+          "url": "/training",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Tutorials",
+          "url": "https://learn.hashicorp.com/",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": []
+    },
+    {
+      "title": "Docs",
+      "navItems": [
+        {
+          "title": "Terraform",
+          "url": "https://www.terraform.io/docs/index.html",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Vault",
+          "url": "https://www.vaultproject.io/docs",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Consul",
+          "url": "https://www.consul.io/docs/index.html",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Nomad",
+          "url": "https://www.nomadproject.io/docs",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Vagrant",
+          "url": "https://www.vagrantup.com/docs",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Packer",
+          "url": "https://www.packer.io/docs",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Boundary",
+          "url": "https://boundaryproject.io/docs",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Waypoint",
+          "url": "https://waypointproject.io/docs",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Sentinel",
+          "url": "https://docs.hashicorp.com/sentinel",
+          "badge": "",
+          "external": true
+        }
+      ],
+      "navCta": []
+    }
+  ],
+  "learnPromos": [
+    {
+      "image": {
+        "url": "https://www.datocms-assets.com/2885/1627578888-learn.jpg",
+        "alt": "HashiCorp Learn",
+        "format": "jpg"
+      },
+      "linkUrl": "https://learn.hashicorp.com/?utm_source=www&utm_content=resources_main_nav",
+      "linkTitle": "View tutorials",
+      "theme": "light",
+      "title": "Learn HashiCorp tools with self-guided tutorials, videos, and hands-on labs."
+    }
+  ],
+  "supportNav": [
+    {
+      "title": "Customer Success",
+      "navItems": [
+        {
+          "title": "Overview",
+          "url": "/customer-success",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "Professional Services",
+          "url": "/customer-success/professional-services",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "HashiCorp Enterprise Academy",
+          "url": "/customer-success/enterprise-academy",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": [
+        { "title": "Support Portal", "url": "https://support.hashicorp.com/" }
+      ]
+    },
+    {
+      "title": "Support",
+      "navItems": [
+        {
+          "title": "Submit a request",
+          "url": "https://support.hashicorp.com/hc/en-us/requests/new",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Enterprise Support Plan",
+          "url": "/customer-success/enterprise-support",
+          "badge": "",
+          "external": false
+        },
+        {
+          "title": "System Status",
+          "url": "https://status.hashicorp.com/",
+          "badge": "",
+          "external": true
+        },
+        {
+          "title": "Services and policies",
+          "url": "/technical-support-services-and-policies",
+          "badge": "",
+          "external": false
+        }
+      ],
+      "navCta": []
+    }
+  ],
+  "supportPromos": [
+    {
+      "image": {
+        "url": "https://www.datocms-assets.com/2885/1620077090-hashicorp-stack-promo.png",
+        "alt": "Hashicorp Stack",
+        "format": "png"
+      },
+      "linkUrl": "/cloud-operating-model?utm_source=www&utm_content=success_main_nav",
+      "linkTitle": "Read the whitepaper",
+      "theme": "brand",
+      "title": "Unlocking the Cloud Operating Model: Thrive in an era of multi-cloud architecture"
+    }
+  ]
+}

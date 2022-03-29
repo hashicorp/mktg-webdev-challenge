@@ -6,4 +6,6 @@
 
 .myData {
   color: yellow;
+  background-color: var(--black);
+  padding: 16px;
 }
