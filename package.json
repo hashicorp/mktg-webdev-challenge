@@ -1,54 +1,54 @@
 {
-  "name": "mktg-dev-test",
-  "description": "Technical evaluation for web dev applicants",
-  "version": "0.1.0",
-  "author": "HashiCorp",
-  "dependencies": {
-    "@hashicorp/flight-icons": "^2.16.0",
-    "@hashicorp/mktg-global-styles": "^4.5.0",
-    "@hashicorp/mktg-logos": "^1.3.5",
-    "@hashicorp/platform-code-highlighting": "^0.2.0",
-    "@hashicorp/platform-markdown-utils": "^0.3.2",
-    "@hashicorp/platform-nextjs-plugin": "^2.0.1",
-    "@hashicorp/react-button": "^6.3.1",
-    "@hashicorp/react-checkbox-input": "^5.0.3",
-    "@hashicorp/react-image": "^4.1.1",
-    "@hashicorp/react-inline-svg": "^6.1.0",
-    "@hashicorp/react-link-wrap": "^3.1.0",
-    "@hashicorp/react-text-input": "^5.0.2",
-    "faker": "5.5.3",
-    "next": "^12.1.2",
-    "next-mdx-remote": "^3.0.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@hashicorp/platform-cli": "^2.0.0",
-    "@hashicorp/platform-postcss-config": "^0.1.0",
-    "@hashicorp/platform-types": "^0.1.1",
-    "@types/react": "^17.0.14",
-    "husky": "4.2.5",
-    "postcss": "^8.4.5",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-normalize": "^10.0.1",
-    "postcss-preset-env": "6.7.0",
-    "prettier": "2.3.2",
-    "typescript": "^4.6.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "next-hashicorp precommit"
-    }
-  },
-  "scripts": {
-    "build": "next build",
-    "format": "next-hashicorp format",
-    "lint": "next-hashicorp lint",
-    "start": "next dev",
-    "static": "next build && next export"
-  },
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=7.0.0"
-  }
+	"name": "mktg-dev-test",
+	"description": "Technical evaluation for web dev applicants",
+	"version": "0.1.0",
+	"author": "HashiCorp",
+	"dependencies": {
+		"@hashicorp/flight-icons": "^2.16.0",
+		"@hashicorp/mktg-global-styles": "^4.5.0",
+		"@hashicorp/mktg-logos": "^1.3.5",
+		"@hashicorp/platform-code-highlighting": "^0.2.0",
+		"@hashicorp/platform-markdown-utils": "^0.3.2",
+		"@hashicorp/platform-nextjs-plugin": "^2.0.1",
+		"@hashicorp/react-button": "^6.3.1",
+		"@hashicorp/react-checkbox-input": "^5.0.3",
+		"@hashicorp/react-image": "^4.1.1",
+		"@hashicorp/react-inline-svg": "^6.1.0",
+		"@hashicorp/react-link-wrap": "^3.1.0",
+		"@hashicorp/react-text-input": "^5.0.2",
+		"faker": "5.5.3",
+		"next": "^12.1.2",
+		"next-mdx-remote": "^3.0.4",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@hashicorp/platform-cli": "^2.7.2",
+		"@hashicorp/platform-postcss-config": "^0.1.0",
+		"@hashicorp/platform-types": "^0.1.1",
+		"@types/react": "^17.0.14",
+		"husky": "4.2.5",
+		"postcss": "^8.4.5",
+		"postcss-flexbugs-fixes": "^5.0.2",
+		"postcss-normalize": "^10.0.1",
+		"postcss-preset-env": "6.7.0",
+		"prettier": "2.3.2",
+		"typescript": "^4.6.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "next-hashicorp precommit"
+		}
+	},
+	"scripts": {
+		"build": "next build",
+		"format": "next-hashicorp format",
+		"lint": "next-hashicorp lint",
+		"start": "next dev",
+		"static": "next build && next export"
+	},
+	"engines": {
+		"node": ">=14.0.0",
+		"npm": ">=7.0.0"
+	}
 }
