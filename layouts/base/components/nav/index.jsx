@@ -137,15 +137,14 @@ function Nav({
 			) : undefined}
 			<nav className={`${activeDesktop || activeMobile ? 'active' : ''}`}>
 				{/* Logos */}
-				<Link href="/" legacyBehavior>
-					<a
-						onContextMenu={logoOnContextMenu}
-						className="logo"
-						title="HashiCorp"
-					>
-						<InlineSvg className="logo-desktop" src={LogoCorporate} />
-						<InlineSvg className="logo-mobile" src={LogoCorporateMobile} />
-					</a>
+				<Link
+					href="/"
+					onContextMenu={logoOnContextMenu}
+					className="logo"
+					title="HashiCorp"
+				>
+					<InlineSvg className="logo-desktop" src={LogoCorporate} />
+					<InlineSvg className="logo-mobile" src={LogoCorporateMobile} />
 				</Link>
 
 				{/* Mobile Toggles */}
@@ -176,15 +175,13 @@ function Nav({
 									{infrastructureProducts.map(({ url, product, badge }) => {
 										return (
 											<li key={url}>
-												<Link href={url} legacyBehavior>
-													<a>
-														<InlineSvg
-															className="product-logo"
-															src={PRODUCT_LOGO_MAP[product]}
-														/>
-														{product}
-														{badge ? <NavBadge>{badge}</NavBadge> : null}
-													</a>
+												<Link href={url}>
+													<InlineSvg
+														className="product-logo"
+														src={PRODUCT_LOGO_MAP[product]}
+													/>
+													{product}
+													{badge ? <NavBadge>{badge}</NavBadge> : null}
 												</Link>
 											</li>
 										)
@@ -195,15 +192,13 @@ function Nav({
 									{networkingProducts.map(({ url, product, badge }) => {
 										return (
 											<li key={url}>
-												<Link href={url} legacyBehavior>
-													<a>
-														<InlineSvg
-															className="product-logo"
-															src={PRODUCT_LOGO_MAP[product]}
-														/>
-														{product}
-														{badge ? <NavBadge>{badge}</NavBadge> : null}
-													</a>
+												<Link href={url}>
+													<InlineSvg
+														className="product-logo"
+														src={PRODUCT_LOGO_MAP[product]}
+													/>
+													{product}
+													{badge ? <NavBadge>{badge}</NavBadge> : null}
 												</Link>
 											</li>
 										)
@@ -216,15 +211,13 @@ function Nav({
 									{securityProducts.map(({ url, product, badge }) => {
 										return (
 											<li key={url}>
-												<Link href={url} legacyBehavior>
-													<a>
-														<InlineSvg
-															className="product-logo"
-															src={PRODUCT_LOGO_MAP[product]}
-														/>
-														{product}
-														{badge ? <NavBadge>{badge}</NavBadge> : null}
-													</a>
+												<Link href={url}>
+													<InlineSvg
+														className="product-logo"
+														src={PRODUCT_LOGO_MAP[product]}
+													/>
+													{product}
+													{badge ? <NavBadge>{badge}</NavBadge> : null}
 												</Link>
 											</li>
 										)
@@ -237,15 +230,13 @@ function Nav({
 									{applicationProducts.map(({ url, product, badge }) => {
 										return (
 											<li key={url}>
-												<Link href={url} legacyBehavior>
-													<a>
-														<InlineSvg
-															className="product-logo"
-															src={PRODUCT_LOGO_MAP[product]}
-														/>
-														{product}
-														{badge ? <NavBadge>{badge}</NavBadge> : null}
-													</a>
+												<Link href={url}>
+													<InlineSvg
+														className="product-logo"
+														src={PRODUCT_LOGO_MAP[product]}
+													/>
+													{product}
+													{badge ? <NavBadge>{badge}</NavBadge> : null}
 												</Link>
 											</li>
 										)
@@ -263,15 +254,13 @@ function Nav({
 									{hcpProducts.map(({ url, product, badge }) => {
 										return (
 											<li key={url}>
-												<Link href={url} legacyBehavior>
-													<a>
-														<InlineSvg
-															className="product-logo"
-															src={PRODUCT_LOGO_MAP[product]}
-														/>
-														{product}
-														{badge ? <NavBadge>{badge}</NavBadge> : null}
-													</a>
+												<Link href={url}>
+													<InlineSvg
+														className="product-logo"
+														src={PRODUCT_LOGO_MAP[product]}
+													/>
+													{product}
+													{badge ? <NavBadge>{badge}</NavBadge> : null}
 												</Link>
 											</li>
 										)
@@ -470,17 +459,13 @@ function Nav({
 							})}
 						</NavItem>
 						<li className="nav-item">
-							<Link href="/partners" legacyBehavior>
-								<a className="link" id="ab_partners">
-									Partners
-								</a>
+							<Link href="/partners" className="link" id="ab_partners">
+								Partners
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link href="/events?type=all" legacyBehavior>
-								<a className="link" id="ab_events">
-									Events
-								</a>
+							<Link href="/events?type=all" className="link" id="ab_events">
+								Events
 							</Link>
 						</li>
 					</ul>
