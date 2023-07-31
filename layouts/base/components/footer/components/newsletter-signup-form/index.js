@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react'
-
-import getAnalytics from './helpers/getAnalytics'
+import React, { useState } from 'react'
 
 import Button from '@hashicorp/react-button'
 import CheckboxInput from '@hashicorp/react-checkbox-input'
