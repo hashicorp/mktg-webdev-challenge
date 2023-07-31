@@ -102,21 +102,20 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 					<ul className="solutions">
 						<li>
 							<span className="label">Infrastructure</span>
-							<Link href="/products/terraform" legacyBehavior>
-								<a
-									className="product-link"
-									data-ga-footer="Solutions | Terraform"
-								>
-									<div className="product-icon">
-										<Image
-											src={require('@hashicorp/flight-icons/svg/terraform-color-16.svg')}
-											alt=""
-											height={16}
-											width={16}
-										/>
-									</div>
-									<span className="solution">Terraform</span>
-								</a>
+							<Link
+								href="/products/terraform"
+								className="product-link"
+								data-ga-footer="Solutions | Terraform"
+							>
+								<div className="product-icon">
+									<Image
+										src={require('@hashicorp/flight-icons/svg/terraform-color-16.svg')}
+										alt=""
+										height={16}
+										width={16}
+									/>
+								</div>
+								<span className="solution">Terraform</span>
 							</Link>
 							<a
 								className="product-link"
@@ -136,34 +135,38 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 						</li>
 						<li>
 							<span className="label">Networking</span>
-							<Link href="/products/consul" legacyBehavior>
-								<a className="product-link" data-ga-footer="Solutions | Consul">
-									<div className="product-icon">
-										<Image
-											src={require('@hashicorp/flight-icons/svg/consul-color-16.svg')}
-											alt=""
-											height={16}
-											width={16}
-										/>
-									</div>
-									<span className="solution">Consul</span>
-								</a>
+							<Link
+								href="/products/consul"
+								className="product-link"
+								data-ga-footer="Solutions | Consul"
+							>
+								<div className="product-icon">
+									<Image
+										src={require('@hashicorp/flight-icons/svg/consul-color-16.svg')}
+										alt=""
+										height={16}
+										width={16}
+									/>
+								</div>
+								<span className="solution">Consul</span>
 							</Link>
 						</li>
 						<li>
 							<span className="label">Security</span>
-							<Link href="/products/vault" legacyBehavior>
-								<a className="product-link" data-ga-footer="Solutions | Vault">
-									<div className="product-icon">
-										<Image
-											src={require('@hashicorp/flight-icons/svg/vault-color-16.svg')}
-											alt=""
-											height={16}
-											width={16}
-										/>
-									</div>
-									<span className="solution">Vault</span>
-								</a>
+							<Link
+								href="/products/vault"
+								className="product-link"
+								data-ga-footer="Solutions | Vault"
+							>
+								<div className="product-icon">
+									<Image
+										src={require('@hashicorp/flight-icons/svg/vault-color-16.svg')}
+										alt=""
+										height={16}
+										width={16}
+									/>
+								</div>
+								<span className="solution">Vault</span>
 							</Link>
 							<a
 								className="product-link"
@@ -183,18 +186,20 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 						</li>
 						<li>
 							<span className="label">Applications</span>
-							<Link href="/products/nomad" legacyBehavior>
-								<a className="product-link" data-ga-footer="Solutions | Nomad">
-									<div className="product-icon">
-										<Image
-											src={require('@hashicorp/flight-icons/svg/nomad-color-16.svg')}
-											alt=""
-											height={16}
-											width={16}
-										/>
-									</div>
-									<span className="solution">Nomad</span>
-								</a>
+							<Link
+								href="/products/nomad"
+								className="product-link"
+								data-ga-footer="Solutions | Nomad"
+							>
+								<div className="product-icon">
+									<Image
+										src={require('@hashicorp/flight-icons/svg/nomad-color-16.svg')}
+										alt=""
+										height={16}
+										width={16}
+									/>
+								</div>
+								<span className="solution">Nomad</span>
 							</Link>
 							<a
 								className="product-link"
@@ -232,8 +237,8 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 						<span className="label">Resources</span>
 						<ul>
 							<li>
-								<Link href="/blog" legacyBehavior>
-									<a data-ga-footer="Resources | Blog">Blog</a>
+								<Link href="/blog" data-ga-footer="Resources | Blog">
+									Blog
 								</Link>
 							</li>
 							<li>
@@ -245,31 +250,31 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 								</a>
 							</li>
 							<li>
-								<Link href="/community/" legacyBehavior>
-									<a data-ga-footer="Resources | Community">Community</a>
+								<Link href="/community/" data-ga-footer="Resources | Community">
+									Community
 								</Link>
 							</li>
 							<li>
-								<Link href="/events" legacyBehavior>
-									<a data-ga-footer="Resources | Events">Events</a>
+								<Link href="/events" data-ga-footer="Resources | Events">
+									Events
 								</Link>
 							</li>
 							<li>
 								<Link
 									href="/partners/find-a-partner?category=tech"
-									legacyBehavior
+									data-ga-footer="Resources | Integrations"
 								>
-									<a data-ga-footer="Resources | Integrations">Integrations</a>
+									Integrations
 								</Link>
 							</li>
 							<li>
-								<Link href="/resources" legacyBehavior>
-									<a data-ga-footer="Resources | Library">Library</a>
+								<Link href="/resources" data-ga-footer="Resources | Library">
+									Library
 								</Link>
 							</li>
 							<li>
-								<Link href="/partners" legacyBehavior>
-									<a data-ga-footer="Resources | Partners">Partners</a>
+								<Link href="/partners" data-ga-footer="Resources | Partners">
+									Partners
 								</Link>
 							</li>
 							<li>
@@ -281,13 +286,16 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 								</a>
 							</li>
 							<li>
-								<Link href="/customer-success" legacyBehavior>
-									<a data-ga-footer="Resources | Support">Support</a>
+								<Link
+									href="/customer-success"
+									data-ga-footer="Resources | Support"
+								>
+									Support
 								</Link>
 							</li>
 							<li>
-								<Link href="/training" legacyBehavior>
-									<a data-ga-footer="Resources | Training">Training</a>
+								<Link href="/training" data-ga-footer="Resources | Training">
+									Training
 								</Link>
 							</li>
 						</ul>
@@ -296,20 +304,18 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 						<span className="label">Company</span>
 						<ul>
 							<li>
-								<Link href="/about" legacyBehavior>
-									<a data-ga-footer="Company | About Us">About Us</a>
+								<Link href="/about" data-ga-footer="Company | About Us">
+									About Us
 								</Link>
 							</li>
 							<li>
-								<Link href="/jobs" legacyBehavior>
-									<a data-ga-footer="Company | Jobs">
-										Jobs<span className="tag">We&apos;re Hiring</span>
-									</a>
+								<Link href="/jobs" data-ga-footer="Company | Jobs">
+									Jobs<span className="tag">We&apos;re Hiring</span>
 								</Link>
 							</li>
 							<li>
-								<Link href="/press" legacyBehavior>
-									<a data-ga-footer="Company | Press Center">Press Center</a>
+								<Link href="/press" data-ga-footer="Company | Press Center">
+									Press Center
 								</Link>
 							</li>
 							<li>
@@ -321,13 +327,13 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 								</a>
 							</li>
 							<li>
-								<Link href="/brand" legacyBehavior>
-									<a data-ga-footer="Company | Brand">Brand</a>
+								<Link href="/brand" data-ga-footer="Company | Brand">
+									Brand
 								</Link>
 							</li>
 							<li>
-								<Link href="/contact" legacyBehavior>
-									<a data-ga-footer="Company | Contact Us">Contact Us</a>
+								<Link href="/contact" data-ga-footer="Company | Contact Us">
+									Contact Us
 								</Link>
 							</li>
 						</ul>
@@ -358,30 +364,37 @@ function Footer({ openConsentManager = () => {}, showSignupForm }) {
 					</ul>
 					<ul>
 						<li>
-							<Link href="/terms-of-service" legacyBehavior>
-								<a data-ga-footer="Bottom | Terms of Use">Terms of Use</a>
+							<Link
+								href="/terms-of-service"
+								data-ga-footer="Bottom | Terms of Use"
+							>
+								Terms of Use
 							</Link>
 						</li>
 						<li>
-							<Link href="/security" legacyBehavior>
-								<a data-ga-footer="Bottom | Security">Security</a>
+							<Link href="/security" data-ga-footer="Bottom | Security">
+								Security
 							</Link>
 						</li>
 						<li>
-							<Link href="/privacy" legacyBehavior>
-								<a data-ga-footer="Bottom | Privacy">Privacy</a>
+							<Link href="/privacy" data-ga-footer="Bottom | Privacy">
+								Privacy
 							</Link>
 						</li>
 						<li>
-							<Link href="/trademark-policy" legacyBehavior>
-								<a data-ga-footer="Bottom | Trademark Policy">
-									Trademark Policy
-								</a>
+							<Link
+								href="/trademark-policy"
+								data-ga-footer="Bottom | Trademark Policy"
+							>
+								Trademark Policy
 							</Link>
 						</li>
 						<li>
-							<Link href="/trade-controls" legacyBehavior>
-								<a data-ga-footer="Bottom | Trade Controls">Trade Controls</a>
+							<Link
+								href="/trade-controls"
+								data-ga-footer="Bottom | Trade Controls"
+							>
+								Trade Controls
 							</Link>
 						</li>
 					</ul>
