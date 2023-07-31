@@ -3,7 +3,6 @@ import Link from 'next/link'
 import HashicorpLogoSvg from '@hashicorp/mktg-logos/corporate/hashicorp/primary/white.svg?include'
 import InlineSvg from '@hashicorp/react-inline-svg'
 
-import NewsletterSignupForm from './components/newsletter-signup-form'
 import IconFacebook from './social/icon-facebook'
 import IconGithub from './social/icon-github'
 import IconLinkedIn from './social/icon-linkedin'
@@ -12,21 +11,10 @@ import IconTwitter from './social/icon-twitter'
 import IconYouTube from './social/icon-youtube'
 import Image from 'next/image'
 
-function Footer({ openConsentManager = () => {}, showSignupForm }) {
+function Footer({ openConsentManager = () => {} }) {
 	return (
 		<footer className="g-footer">
 			<div className="g-grid-container">
-				{showSignupForm && (
-					<div
-						className="newsletter-section"
-						data-testid="newsletterSignupForm"
-					>
-						<NewsletterSignupForm
-							theme={{ background: 'dark' }}
-							placement="footer"
-						/>
-					</div>
-				)}
 				<div className="social-section">
 					<InlineSvg className="hc-logo" src={HashicorpLogoSvg} />
 					<ul>
