@@ -19,14 +19,15 @@
 		"faker": "5.5.3",
 		"next": "^12.1.2",
 		"next-mdx-remote": "^3.0.4",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@hashicorp/platform-cli": "^2.7.2",
 		"@hashicorp/platform-postcss-config": "^0.2.0",
 		"@hashicorp/platform-types": "^0.4.0",
-		"@types/react": "^17.0.14",
+		"@types/react": "^18.2.17",
+		"@types/react-dom": "^18.2.7",
 		"husky": "4.2.5",
 		"postcss": "^8.4.27",
 		"postcss-flexbugs-fixes": "^5.0.2",
