@@ -8,22 +8,22 @@ import Button from 'components/button'
 import s from './style.module.css'
 
 interface Props {
-  mdxSource: MDXRemoteSerializeResult
+	mdxSource: MDXRemoteSerializeResult
 }
 
 export default function IndexPage({ mdxSource }: Props): React.ReactElement {
-  return (
-    <main className={s.root}>
-      <MDXRemote {...mdxSource} components={{ Button }} />
-    </main>
-  )
+	return (
+		<main className={s.root}>
+			<MDXRemote {...mdxSource} components={{ Button }} />
+		</main>
+	)
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
-  const source = fs.readFileSync(
-    path.join(process.cwd(), 'pages/home/content.mdx'),
-    'utf8'
-  )
-  const mdxSource = await serialize(source, { mdxOptions: markdownDefaults() })
-  return { props: { mdxSource } }
+	const source = fs.readFileSync(
+		path.join(process.cwd(), 'pages/home/content.mdx'),
+		'utf8'
+	)
+	const mdxSource = await serialize(source, { mdxOptions: markdownDefaults() })
+	return { props: { mdxSource } }
 }

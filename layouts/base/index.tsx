@@ -4,13 +4,13 @@ import Nav from './components/nav'
 import Footer from './components/footer'
 
 const BaseLayout: React.FC = ({ children }) => {
-  return (
-    <>
-      <Nav data={navData} />
-      {children}
-      <Footer />
-    </>
-  )
+	return (
+		<>
+			<Nav data={navData} />
+			{children}
+			<Footer />
+		</>
+	)
 }
 
 export default BaseLayout
