@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@hashicorp/platform-postcss-config'),
+	...require('@hashicorp/platform-postcss-config'),
 }

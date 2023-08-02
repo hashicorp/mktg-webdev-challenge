@@ -1,6 +1,25 @@
-const eslintConfig = require('@hashicorp/platform-cli/config/.eslintrc.js')
 module.exports = {
-  ...eslintConfig,
-  /* Specify overrides here */
-  /* For reference: https://github.com/hashicorp/nextjs-scripts/blob/main/packages/cli/config/.eslintrc.js */
+	root: true,
+	extends: './node_modules/@hashicorp/platform-cli/config/.eslintrc.js',
+
+	rules: {
+		curly: 'error',
+	},
+
+	overrides: [
+		{
+			files: ['**/*.ts?(x)'],
+			rules: {
+				'@typescript-eslint/explicit-module-boundary-types': 'off',
+				'@typescript-eslint/no-inferrable-types': 'off',
+				'@typescript-eslint/typedef': [
+					'warn',
+					{
+						arrowParameter: true,
+						parameter: true,
+					},
+				],
+			},
+		},
+	],
 }
