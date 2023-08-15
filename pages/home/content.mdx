@@ -2,7 +2,7 @@
 
 Hi! Thanks so much for interviewing with us 💖. If you are reading this, it means that we like you, and I hope you like us too! In this next step, you get an opportunity to see how we work, and we get the same opportunity for you. Let's get right to it.
 
-The task is to build a "people directory" page. This page should allow visitor to search by name for a person. If this were a real page, we'd want to search all 317 person records in our CMS, but for the purposes of this exercise, limit your results to 100. This is the maximum number of results that our CMS API will return in a single page.
+The task is to build a "people directory" page. This page should allow visitors to search by name for a person. If this were a real page, we'd want to search all 317 records in our CMS, but for the purposes of this exercise, limit your results to 100. This is the maximum number of results that our CMS API will return in a single page.
 
 Use [this Figma file](https://www.figma.com/file/xGicP4qkXbMhte4LAYxC4X/Untitled?node-id=0%3A1) as your source of truth for design and behavior:
 
@@ -24,7 +24,7 @@ This project uses [Next.js](https://nextjs.org), a react-based framework that ge
 The data for this project can be fetched from our CMS, [DatoCMS](https://www.datocms.com/), `@hashicorp/platform-cms` exports a function that allows you to easily fetch the data. An example might look something like this:
 
 ```jsx
-// this is called rivet because it wraps this a library called "rivet-graphql"
+// this is called rivet because it wraps a library called "rivet-graphql"
 import rivetQuery from '@hashicorp/platform-cms'
 // @hashicorp/platform-nextjs-plugin configures ".graphql" files to be imported as plain text
 import query from './query.graphql'
@@ -50,7 +50,7 @@ export async function getStaticProps() {
 
 You'll see a similar template provided in the `pages/people` folder, which is working out of the box.
 
-Our CMS, [DatoCMS](https://www.datocms.com/), exposes a public GraphQL API to our data which [you can explore here using GraphiQL](https://cda-explorer.datocms.com/?apitoken=dc45ff8c8b27dd22a7c24aaaf8aa75&query=query%20%7B%0A%20%20allDepartments%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20parent%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20%0A%20%20allPeople%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20avatar%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20department%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D). We loaded up the same query as you have in the `people` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
+Our CMS, [DatoCMS](https://www.datocms.com/), exposes a public GraphQL API to our data which [you can explore here using GraphQL](https://cda-explorer.datocms.com/?apitoken=dc45ff8c8b27dd22a7c24aaaf8aa75&query=query%20%7B%0A%20%20allDepartments%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20parent%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20%0A%20%20allPeople%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20avatar%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20department%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D). We loaded up the same query as you have in the `people` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
 
 ### Building The Page
 
