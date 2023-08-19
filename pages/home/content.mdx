@@ -50,7 +50,7 @@ export async function getStaticProps() {
 
 You'll see a similar template provided in the `pages/people` folder, which is working out of the box.
 
-Our CMS, [DatoCMS](https://www.datocms.com/), exposes a public GraphQL API to our data which [you can explore here using GraphQL](https://cda-explorer.datocms.com/?apitoken=dc45ff8c8b27dd22a7c24aaaf8aa75&query=query%20%7B%0A%20%20allDepartments%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20parent%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20%0A%20%20allPeople%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20avatar%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20department%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D). We loaded up the same query as you have in the `people` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
+Our CMS, [DatoCMS](https://www.datocms.com/), exposes a public GraphQL API to our data which [you can explore here using GraphiQL](https://cda-explorer.datocms.com/?apitoken=dc45ff8c8b27dd22a7c24aaaf8aa75&query=query%20%7B%0A%20%20allDepartments%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20parent%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20%0A%20%20allPeople%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20avatar%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20department%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D). We loaded up the same query as you have in the `people` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
 
 ### Building The Page
 
