@@ -6,7 +6,7 @@ Run `npm install` then `npm start`, and visit `http://localhost:3000` for instru
 
 Please **do not submit a pull request to, or open any issues in this repo**. This is a template repository only. All your work should be done on your copy of the repo only. To begin your challenge:
 
-- Create a new repository using this one as a template. This can be done in two ways:
+- Create a new private repository using this one as a template. This can be done in two ways:
   - Clicking the "Use this template" button on the GitHub home page
   - Visiting the generate page: [mktg-webdev-challenge/generate](https://github.com/hashicorp/mktg-webdev-challenge/generate)
 - In your new repository, go to Settings > Collaborators
