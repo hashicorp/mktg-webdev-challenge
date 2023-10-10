@@ -6,20 +6,22 @@
 # You may want / need to edit this query!
 
 query {
-  allDepartments(first: 100) {
-    name
-    parent {
-      id
-    }
-  }
+	allDepartments(first: 100) {
+		name
+		id
+		parent {
+			id
+		}
+	}
 
-  allPeople(first: 100) {
-    name
-    avatar {
-      url
-    }
-    department {
-      name
-    }
-  }
+	allPeople(first: 100) {
+		name
+		avatar {
+			url
+		}
+		department {
+			name
+		}
+		title
+	}
 }

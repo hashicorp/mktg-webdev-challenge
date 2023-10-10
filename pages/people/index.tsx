@@ -16,6 +16,10 @@ export default function PeoplePage({
 }: Props): React.ReactElement {
 	return (
 		<main className="g-grid-container">
+			<div className={style.headerContainer}>
+				<h1>HashiCorp Humans</h1>
+				<p>Find a HashiCorp human</p>
+			</div>
 			<h2>People Data</h2>
 			<pre className={style.myData}>{JSON.stringify(allPeople, null, 2)}</pre>
 			<h2>Departments Data</h2>
@@ -28,6 +32,7 @@ export default function PeoplePage({
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
 	const data = await rivetQuery({ query })
+	console.log('data', data)
 	return { props: data }
 }
 

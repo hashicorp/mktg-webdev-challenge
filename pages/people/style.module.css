@@ -5,7 +5,19 @@
 /* ref: https://preset-env.cssdb.org/ */
 
 .myData {
-  color: yellow;
-  background-color: var(--black);
-  padding: 16px;
+	color: yellow;
+	background-color: var(--black);
+	padding: 16px;
+}
+
+.headerContainer {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	& h1 {
+		font-weight: 300;
+		font-size: 3rem;
+	}
+	& p {
+		color: #4e515d;
+	}
 }
