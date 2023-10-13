@@ -5,7 +5,7 @@
 /* ref: https://preset-env.cssdb.org/ */
 
 .myData {
-  color: yellow;
-  background-color: var(--black);
-  padding: 16px;
+	color: yellow;
+	background-color: var(--black);
+	padding: 16px;
 }
