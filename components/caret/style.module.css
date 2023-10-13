@@ -1,0 +1,24 @@
+.root {
+	line-height: 1;
+	color: #484848;
+	margin: 0.75em 0;
+	& button {
+		border: none;
+		background-color: transparent;
+		padding: 1px 3px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	& span {
+		line-height: 24px;
+	}
+
+	& ul {
+		border-left: 1px solid #cbcbcb;
+		padding-left: 3px;
+		margin-left: 1em;
+	}
+}

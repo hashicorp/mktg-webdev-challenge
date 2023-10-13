@@ -4,6 +4,14 @@
 
 /* ref: https://preset-env.cssdb.org/ */
 
+.main {
+	font-family: 'Open Sans', sans-serif;
+	& h3 {
+		font-size: 1em;
+		font-weight: 600;
+	}
+}
+
 .myData {
 	color: yellow;
 	background-color: var(--black);
@@ -11,13 +19,52 @@
 }
 
 .headerContainer {
-	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	& h1 {
 		font-weight: 300;
-		font-size: 3rem;
+		font-size: 3em;
 	}
 	& p {
 		color: #4e515d;
 	}
+}
+
+.searchBar {
+	margin: 2em 0;
+	& form {
+		margin: 10px 0;
+	}
+}
+
+.searchInput {
+	min-width: 20em;
+	width: 23em;
+	height: 3em;
+	border: 1px solid #cfd1d9;
+	border-radius: 100px;
+	padding-left: 1em;
+}
+
+.searchContainer {
+	display: flex;
+	gap: 1em;
+}
+
+.filterContainer {
+	min-width: 210px;
+	padding-right: 30px;
+}
+
+.peopleList {
+	padding: 0;
+	margin-left: 1em;
+	& li {
+		list-style-type: none;
+	}
+}
+
+.searchResultsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }

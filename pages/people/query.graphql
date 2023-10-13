@@ -16,10 +16,12 @@ query {
 
 	allPeople(first: 100) {
 		name
+		id
 		avatar {
 			url
 		}
 		department {
+			id
 			name
 		}
 		title
