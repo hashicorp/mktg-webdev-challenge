@@ -13,37 +13,72 @@ interface Props {
 	allDepartments: DepartmentRecord[]
 }
 
+// Recurisive function to get all descendants of a parent department
+function getAllDescendants(
+	parent: DepartmentRecord,
+	allDepartments: DepartmentRecord[],
+	descendants: string[]
+) {
+	const allChildren = allDepartments.filter(
+		(dept: DepartmentRecord) => dept.parent?.id === parent.id
+	)
+
+	if (allChildren.length === 0) {
+		descendants.push(parent.id)
+	} else {
+		descendants.push(parent.id)
+		allChildren.forEach((child: DepartmentRecord) => {
+			getAllDescendants(child, allDepartments, descendants)
+		})
+	}
+	return descendants
+}
+
 export default function PeoplePage({
 	allPeople,
 	allDepartments,
 }: Props): React.ReactElement {
-	// let filterBy = [];
 	const [filterBy, setFilterBy] = React.useState([])
 	const [hideNoAvatarResults, setHideNoAvatarResults] = React.useState(false)
 	const [filteredPeople, setFilteredPeople] = React.useState(allPeople)
-	// let filteredPeople: PersonRecord[] = allPeople;
+	const [filteredByNamePeople, setFilteredByNamePeople] =
+		React.useState(filteredPeople)
 	const topLevelDepartments: DepartmentRecord[] = allDepartments.filter(
-		(dept) => !dept.parent
+		(dept: DepartmentRecord) => !dept.parent
 	)
 	const hasNoResults = filteredPeople.length == 0
-	// console.log(allPeople.filter(person => ["10893315", "10893318"].includes(person?.department?.id)))
 
-	const handleDepartmentClick = (department: string) => {
-		// setFilterBy([]);
-		console.log('filterBy', department)
-		filterBy.push(department)
-		setFilterBy(filterBy)
+	const handleDepartmentClick = (department: DepartmentRecord) => {
+		// find all children and add to filterBy arr
+		const allSubDepts = getAllDescendants(department, allDepartments, [])
+		const filteredResults = allPeople.filter((person: PersonRecord) =>
+			allSubDepts?.includes(person.department?.id)
+		)
+
+		setFilterBy(allSubDepts)
+		setFilteredPeople(filteredResults)
+		setFilteredByNamePeople(filteredResults)
 	}
 
-	React.useEffect(() => {
-		console.log('filterBy', filterBy)
-		if (filterBy.length > 0) {
-			setFilteredPeople(
-				allPeople.filter((person) => filterBy.includes(person?.department?.id))
-			)
+	const onSearchBoxChange = (e) => {
+		const filterText = e.target.value
+		if (filterText === '') {
+			setFilteredByNamePeople(filteredPeople)
+		} else {
+			const filteredResults = filteredPeople.filter((person: PersonRecord) => {
+				const lowerCaseName = person.name?.toLowerCase()
+				return lowerCaseName.includes(filterText.toLowerCase())
+			})
+			setFilteredByNamePeople(filteredResults)
 		}
-		console.log('filteredPeeps', filteredPeople)
-	}, [filterBy])
+	}
+
+	const onHideNoAvatarChange = () => {
+		setHideNoAvatarResults(!hideNoAvatarResults)
+		// const filteredResults = hideNoAvatarResults ?
+		// 	filteredPeople.filter(person => person.avatar) :
+		// setFilteredPeople(filteredResults);
+	}
 
 	return (
 		<main className={`g-grid-container ${style.main}`}>
@@ -56,11 +91,16 @@ export default function PeoplePage({
 							id="name-search-bar"
 							className={style.searchInput}
 							type="text"
+							onChange={onSearchBoxChange}
 							placeholder="Search people by name"
 						/>
 					</form>
 					<form>
-						<input type="checkbox" id="hide-no-avatar-checkbox" />
+						<input
+							type="checkbox"
+							id="hide-no-avatar-checkbox"
+							onChange={onHideNoAvatarChange}
+						/>
 						<label>Hide people missing a profile image</label>
 					</form>
 				</div>
@@ -70,17 +110,19 @@ export default function PeoplePage({
 				<div className={style.filterContainer}>
 					<h3>Filter By Department</h3>
 					<ul className={style.peopleList}>
-						{topLevelDepartments.map((department) => (
+						{topLevelDepartments.map((department: DepartmentRecord) => (
 							<li key={department.id}>
 								<Caret
 									allDepartments={allDepartments}
 									department={department}
 									subDepartments={allDepartments.filter(
-										(dept) => dept.parent?.id === department.id
+										(dept: DepartmentRecord) =>
+											dept.parent?.id === department.id
 									)}
 									key={department.id}
 									isChild={false}
 									handleDepartmentClick={handleDepartmentClick}
+									selectedDept={filterBy}
 								/>
 							</li>
 						))}
@@ -90,7 +132,7 @@ export default function PeoplePage({
 				<div>
 					<div className={style.searchResultsContainer}>
 						{hasNoResults && <p>No results found.</p>}
-						{filteredPeople.map((person) => (
+						{filteredByNamePeople.map((person: PersonRecord) => (
 							<PersonCard person={person} key={person.id} />
 						))}
 					</div>

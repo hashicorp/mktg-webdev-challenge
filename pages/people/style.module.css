@@ -34,6 +34,12 @@
 	& form {
 		margin: 10px 0;
 	}
+
+	& label {
+		margin-left: 10px;
+		color: #4e515d;
+		font-size: 14px;
+	}
 }
 
 .searchInput {
@@ -66,5 +72,5 @@
 .searchResultsContainer {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 }

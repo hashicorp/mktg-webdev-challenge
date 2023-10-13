@@ -22,3 +22,7 @@
 		margin-left: 1em;
 	}
 }
+
+.selected {
+	color: #1563ff;
+}

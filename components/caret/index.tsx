@@ -9,7 +9,8 @@ export interface CaretProps {
 	department: DepartmentRecord
 	subDepartments: DepartmentRecord[]
 	isChild: boolean
-	handleDepartmentClick: (string) => void
+	selectedDept: string[]
+	handleDepartmentClick: (DepartmentRecord) => void
 }
 
 export default function Caret({
@@ -17,6 +18,7 @@ export default function Caret({
 	department,
 	subDepartments,
 	isChild,
+	selectedDept,
 	handleDepartmentClick,
 }: CaretProps): React.ReactElement {
 	const [isExpanded, setIsExpanded] = React.useState(false)
@@ -28,8 +30,9 @@ export default function Caret({
 		setIsExpanded(!isExpanded)
 	}
 	const onDepartmentClick = () => {
-		handleDepartmentClick(department.id)
+		handleDepartmentClick(department)
 	}
+	const isSelected = selectedDept?.includes(department.id)
 
 	// if has children or is top level parent, display a closed caret;
 	// if child and has no children, display no caret.
@@ -41,20 +44,26 @@ export default function Caret({
 					{isExpanded ? <OpenCaret /> : <CloseCaret />}
 				</button>
 			)}
-			<button onClick={onDepartmentClick}>{department.name}</button>
+			<button
+				onClick={onDepartmentClick}
+				className={isSelected ? `${s.selected}` : ''}
+			>
+				{department.name}
+			</button>
 			<ul>
 				{isExpanded &&
-					subDepartments.map((child) => (
+					subDepartments.map((child: DepartmentRecord) => (
 						<li key={child.id}>
 							<Caret
 								department={child}
 								subDepartments={allDepartments.filter(
-									(dept) => dept.parent?.id === child.id
+									(dept: DepartmentRecord) => dept.parent?.id === child.id
 								)}
 								key={child.id}
 								isChild={true}
 								allDepartments={allDepartments}
 								handleDepartmentClick={handleDepartmentClick}
+								selectedDept={selectedDept}
 							/>
 						</li>
 					))}

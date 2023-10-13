@@ -13,7 +13,7 @@ export default function PersonCard({
 
 	return (
 		<div className={`${s.root}`}>
-			<img src={imageSrc} />
+			<img src={imageSrc} alt="" />
 			<h3>{person.name}</h3>
 			<p>{person.title}</p>
 			<p>{person.department?.name}</p>
