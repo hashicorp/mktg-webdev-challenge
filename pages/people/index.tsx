@@ -38,18 +38,22 @@ export default function PeoplePage({
 					<Filter />
 				</div>
 				<main>
-					<ul className={classNames(style.cards)}>
-						{allPeople.map((person: PersonRecord) => (
-							<li key={person.id}>
-								<Card
-									avatarUrl={person.avatar?.url && person.avatar.url}
-									department={person.department.name}
-									name={person.name}
-									title={person.title}
-								/>
-							</li>
-						))}
-					</ul>
+					{allPeople.length > 0 ? (
+						<ul className={classNames(style.cards)}>
+							{allPeople.map((person: PersonRecord) => (
+								<li key={person.id}>
+									<Card
+										avatarUrl={person.avatar?.url && person.avatar.url}
+										department={person.department.name}
+										name={person.name}
+										title={person.title}
+									/>
+								</li>
+							))}
+						</ul>
+					) : (
+						<p>No results found.</p>
+					)}
 
 					{/* <h2>People Data</h2>
 					<pre className={style.myData}>
