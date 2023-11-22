@@ -1,5 +1,9 @@
 /* your styles here! */
 
+.root {
+	font-family: 'Open Sans', sans-serif;
+}
+
 /* you can use standard css plus anything from postcss-preset-env */
 
 /* ref: https://preset-env.cssdb.org/ */

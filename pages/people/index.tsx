@@ -1,11 +1,13 @@
 import rivetQuery from '@hashicorp/platform-cms'
 import { GetStaticPropsResult } from 'next'
+import classNames from 'classnames'
 import { PersonRecord, DepartmentRecord } from 'types'
 import BaseLayout from '../../layouts/base'
 import query from './query.graphql'
 import Filter from 'components/filter'
 import Header from 'components/header'
 import Card from 'components/card'
+import style from './style.module.css'
 
 interface Props {
 	allPeople: PersonRecord[]
@@ -17,7 +19,7 @@ export default function PeoplePage({
 	allDepartments,
 }: Props): React.ReactElement {
 	return (
-		<div>
+		<div className={classNames(style.root)}>
 			<Header heading="HashiCorp Humans" subheading="Find a HashiCorp human" />
 			<div>
 				<div>
