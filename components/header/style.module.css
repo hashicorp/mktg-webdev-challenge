@@ -1,0 +1,20 @@
+.root {
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+.heading {
+	margin-top: 0;
+	margin-bottom: 24px;
+	font-weight: 300;
+	font-size: 56px;
+	line-height: 64px;
+}
+
+.subheading {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #4e515d;
+	font-size: 16px;
+	line-height: 28px;
+}
