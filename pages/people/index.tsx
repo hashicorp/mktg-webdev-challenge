@@ -4,6 +4,10 @@ import { PersonRecord, DepartmentRecord } from 'types'
 import BaseLayout from '../../layouts/base'
 import style from './style.module.css'
 import query from './query.graphql'
+import Filter from 'components/filter'
+import Header from 'components/header'
+import Search from 'components/search'
+import Card from 'components/card'
 
 interface Props {
 	allPeople: PersonRecord[]
@@ -17,53 +21,17 @@ export default function PeoplePage({
 	return (
 		<div>
 			<div>
-				{/* Filter */}
-				<div>Filter By Department</div>
-				<ul>
-					<li>
-						Category
-						<ul>
-							<li>Subcategory</li>
-							<ul>
-								<li>Subcategory</li>
-							</ul>
-						</ul>
-					</li>
-				</ul>
+				<Filter />
 			</div>
 			<main>
 				<div>
-					{/* Header */}
-					<div>
-						<h1>HashiCorp Humans</h1>
-						<p>Find a HashiCorp human</p>
-					</div>
-					{/* Search */}
-					<div>
-						<input type="search" name="filter" id="filter" />
-						<div>
-							<input
-								type="checkbox"
-								name="missing-people"
-								id="missing-people"
-								placeholder="Search people by name"
-							/>
-							<label htmlFor="missing-people">
-								Hide people missing a profile image
-							</label>
-						</div>
-					</div>
+					<Header />
+					<Search />
 				</div>
 				<div>
-					{/* Card */}
 					<ul>
 						<li>
-							<div>
-								<div>Avatar</div>
-								<h2>Name</h2>
-								<p>Title</p>
-								<p>Department</p>
-							</div>
+							<Card />
 						</li>
 					</ul>
 				</div>
