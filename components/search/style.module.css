@@ -23,5 +23,13 @@
 }
 
 .checkboxContainer {
+	display: flex;
+	align-items: center;
 	margin-top: 16px;
+}
+
+.label {
+	margin-left: 12px;
+	font-size: 14px;
+	color: #4e515d;
 }

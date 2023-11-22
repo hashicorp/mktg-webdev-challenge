@@ -13,13 +13,14 @@ const Search = () => {
 				placeholder="Search people by name"
 			/>
 			<div className={classNames(style.checkboxContainer)}>
+				{/* [] TODO: Style checkbox */}
 				<input
 					type="checkbox"
 					name="missing-people"
 					id="missing-people"
 					placeholder="Search people by name"
 				/>
-				<label htmlFor="missing-people">
+				<label className={classNames(style.label)} htmlFor="missing-people">
 					Hide people missing a profile image
 				</label>
 			</div>
