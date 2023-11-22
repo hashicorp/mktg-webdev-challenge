@@ -1,12 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
+import classNames from 'classNames'
+import style from './style.module.css'
 
 const Card = () => {
 	return (
-		<div>
-			<div>Avatar</div>
-			<h2>Name</h2>
-			<p>Title</p>
-			<p>Department</p>
+		<div className={classNames(style.root)}>
+			<div className={classNames(style.avatarWrapper)}>
+				<img
+					className={classNames(style.avatar)}
+					src="/images/noAvatar.png"
+					alt=""
+				/>
+			</div>
+			<h2 className={classNames(style.name)}>Name</h2>
+			<p className={classNames(style.info)}>Title</p>
+			<p className={classNames(style.info)}>Department</p>
 		</div>
 	)
 }
