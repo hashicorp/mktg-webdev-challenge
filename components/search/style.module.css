@@ -4,7 +4,7 @@
 	align-items: center;
 	max-width: 582px;
 	width: 100%;
-	margin-top: 32px;
+	margin-top: 34px;
 }
 
 .input {
@@ -25,7 +25,7 @@
 .checkboxContainer {
 	display: flex;
 	align-items: center;
-	margin-top: 16px;
+	margin-top: 14px;
 }
 
 .label {

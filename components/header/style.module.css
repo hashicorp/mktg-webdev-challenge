@@ -8,10 +8,10 @@
 
 .heading {
 	margin-top: 0;
-	margin-bottom: 24px;
+	margin-bottom: 20px;
 	font-weight: 300;
 	font-size: 56px;
-	line-height: 64px;
+	line-height: 1;
 }
 
 .subheading {
