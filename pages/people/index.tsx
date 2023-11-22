@@ -26,7 +26,16 @@ export default function PeoplePage({
 					<Filter />
 				</div>
 				<main>
-					<ul>
+					<ul className={classNames(style.cards)}>
+						<li>
+							<Card />
+						</li>
+						<li>
+							<Card />
+						</li>
+						<li>
+							<Card />
+						</li>
 						<li>
 							<Card />
 						</li>
