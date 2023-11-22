@@ -25,7 +25,10 @@ export default function PeoplePage({
 			</div>
 			<main>
 				<div>
-					<Header />
+					<Header
+						heading="HashiCorp Humans"
+						subheading="Find a HashiCorp human"
+					/>
 					<Search />
 				</div>
 				<div>
