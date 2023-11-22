@@ -1,10 +1,17 @@
 import React from 'react'
+import classNames from 'classnames'
+import style from './style.module.css'
 
 const Search = () => {
 	return (
-		<div>
-			<input type="search" name="filter" id="filter" />
-			<div>
+		<div className={classNames(style.root)}>
+			<input
+				className={classNames(style.input)}
+				type="search"
+				name="filter"
+				id="filter"
+			/>
+			<div className={classNames(style.checkboxContainer)}>
 				<input
 					type="checkbox"
 					name="missing-people"

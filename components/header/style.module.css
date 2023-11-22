@@ -1,6 +1,9 @@
 .root {
-	margin-bottom: 32px;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 152px;
+	margin-bottom: 88px;
 }
 
 .heading {
