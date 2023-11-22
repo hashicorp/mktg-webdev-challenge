@@ -27,18 +27,16 @@ export default function PeoplePage({
 				</div>
 				<main>
 					<ul className={classNames(style.cards)}>
-						<li>
-							<Card />
-						</li>
-						<li>
-							<Card />
-						</li>
-						<li>
-							<Card />
-						</li>
-						<li>
-							<Card />
-						</li>
+						{allPeople.map((person: PersonRecord) => (
+							<li key={person.id}>
+								<Card
+									avatarUrl={person.avatar?.url && person.avatar.url}
+									department={person.department.name}
+									name={person.name}
+									title={person.title}
+								/>
+							</li>
+						))}
 					</ul>
 
 					{/* <h2>People Data</h2>
