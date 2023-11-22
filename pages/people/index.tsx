@@ -21,8 +21,8 @@ export default function PeoplePage({
 	return (
 		<div className={classNames(style.root)}>
 			<Header heading="HashiCorp Humans" subheading="Find a HashiCorp human" />
-			<div>
-				<div>
+			<div className={classNames(style.layout)}>
+				<div className={classNames(style.filterColumn)}>
 					<Filter />
 				</div>
 				<main>

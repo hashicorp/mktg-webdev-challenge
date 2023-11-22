@@ -1,7 +1,28 @@
 /* your styles here! */
 
+/* Borrowed from layouts/base/components/nav/style.css */
+@custom-media --desktop-viewport (min-width: 1200px);
+
 .root {
 	font-family: 'Open Sans', sans-serif;
+	max-width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
+.layout {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+}
+
+.filterColumn {
+	display: none;
+
+	@media (--desktop-viewport) {
+		display: block;
+	}
 }
 
 /* you can use standard css plus anything from postcss-preset-env */
