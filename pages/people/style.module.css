@@ -14,7 +14,10 @@
 
 .layout {
 	display: grid;
-	grid-template-columns: 300px 1fr;
+
+	@media (--desktop-viewport) {
+		grid-template-columns: 300px 1fr;
+	}
 }
 
 .filterColumn {
