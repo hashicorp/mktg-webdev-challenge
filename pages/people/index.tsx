@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import rivetQuery from '@hashicorp/platform-cms'
 import { GetStaticPropsResult } from 'next'
 import classNames from 'classnames'
@@ -8,6 +9,7 @@ import Filter from 'components/filter'
 import Header from 'components/header'
 import Card from 'components/card'
 import style from './style.module.css'
+import Search from 'components/search'
 
 interface Props {
 	allPeople: PersonRecord[]
@@ -18,9 +20,19 @@ export default function PeoplePage({
 	allPeople,
 	allDepartments,
 }: Props): React.ReactElement {
+	const [nameFilter, setNameFilter] = useState('')
+	const [hidePeople, setHidePeople] = useState(false)
+
 	return (
 		<div className={classNames(style.root)}>
-			<Header heading="HashiCorp Humans" subheading="Find a HashiCorp human" />
+			<Header heading="HashiCorp Humans" subheading="Find a HashiCorp human">
+				<Search
+					hidePeople={hidePeople}
+					nameFilter={nameFilter}
+					setHidePeople={setHidePeople}
+					setNameFilter={setNameFilter}
+				/>
+			</Header>
 			<div className={classNames(style.layout)}>
 				<div className={classNames(style.filterColumn)}>
 					<Filter />
