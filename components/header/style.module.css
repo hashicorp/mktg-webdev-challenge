@@ -1,17 +1,30 @@
+/* Borrowed from layouts/base/components/nav/style.css */
+@custom-media --desktop-viewport (min-width: 1200px);
+
 .root {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 152px;
-	margin-bottom: 88px;
+	margin-top: 40px;
+	margin-bottom: 38px;
+
+	@media (--desktop-viewport) {
+		margin-top: 152px;
+		margin-bottom: 88px;
+	}
 }
 
 .heading {
 	margin-top: 0;
 	margin-bottom: 20px;
 	font-weight: 300;
-	font-size: 56px;
-	line-height: 1;
+	font-size: 34px;
+	line-height: 1.2;
+	text-align: center;
+
+	@media (--desktop-viewport) {
+		font-size: 56px;
+	}
 }
 
 .subheading {
