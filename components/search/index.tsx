@@ -7,9 +7,10 @@ const Search = () => {
 		<div className={classNames(style.root)}>
 			<input
 				className={classNames(style.input)}
-				type="search"
+				type="text"
 				name="filter"
 				id="filter"
+				placeholder="Search people by name"
 			/>
 			<div className={classNames(style.checkboxContainer)}>
 				<input

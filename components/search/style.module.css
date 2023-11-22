@@ -8,7 +8,18 @@
 }
 
 .input {
+	border: 1px solid #cfd1d9;
+	height: 48px;
 	width: 100%;
+	padding-left: 48px;
+	font-size: 16px;
+	background: transparent url('/images/searchIcon.svg') 16px center no-repeat;
+	border-radius: 24px;
+
+	&::placeholder {
+		color: #989cac;
+		opacity: 1; /* Firefox */
+	}
 }
 
 .checkboxContainer {
