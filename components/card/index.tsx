@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import classNames from 'classNames'
+import classNames from 'classnames'
 import style from './style.module.css'
 
 const Card = () => {
