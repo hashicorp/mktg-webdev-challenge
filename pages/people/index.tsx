@@ -35,7 +35,7 @@ export default function PeoplePage({
 			</Header>
 			<div className={classNames(style.layout)}>
 				<div className={classNames(style.filterColumn)}>
-					<Filter />
+					<Filter data={allDepartments} />
 				</div>
 				<main>
 					{allPeople.length > 0 ? (
@@ -58,11 +58,11 @@ export default function PeoplePage({
 					{/* <h2>People Data</h2>
 					<pre className={style.myData}>
 						{JSON.stringify(allPeople, null, 2)}
-					</pre>
+					</pre> */}
 					<h2>Departments Data</h2>
 					<pre className={style.myData}>
 						{JSON.stringify(allDepartments, null, 2)}
-					</pre> */}
+					</pre>
 				</main>
 			</div>
 		</div>
