@@ -59,10 +59,10 @@ export default function PeoplePage({
 					<pre className={style.myData}>
 						{JSON.stringify(allPeople, null, 2)}
 					</pre> */}
-					<h2>Departments Data</h2>
+					{/* <h2>Departments Data</h2>
 					<pre className={style.myData}>
 						{JSON.stringify(allDepartments, null, 2)}
-					</pre>
+					</pre> */}
 				</main>
 			</div>
 		</div>
