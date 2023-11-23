@@ -1,5 +1,45 @@
 /* your styles here! */
 
+/* Borrowed from layouts/base/components/nav/style.css */
+@custom-media --desktop-viewport (min-width: 1200px);
+
+.root {
+	font-family: 'Open Sans', sans-serif;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 16px;
+	padding-bottom: 364px;
+	padding-left: 16px;
+}
+
+.layout {
+	display: grid;
+
+	@media (--desktop-viewport) {
+		grid-template-columns: 230px 1fr;
+		grid-gap: 2rem;
+	}
+}
+
+.filterColumn {
+	display: none;
+
+	@media (--desktop-viewport) {
+		display: block;
+	}
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+	grid-gap: 2rem;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
 /* you can use standard css plus anything from postcss-preset-env */
 
 /* ref: https://preset-env.cssdb.org/ */

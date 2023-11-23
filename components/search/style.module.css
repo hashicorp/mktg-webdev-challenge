@@ -1,0 +1,42 @@
+/* Borrowed from layouts/base/components/nav/style.css */
+@custom-media --desktop-viewport (min-width: 1200px);
+
+.root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 582px;
+	width: 100%;
+	margin-top: 44px;
+
+	@media (--desktop-viewport) {
+		margin-top: 34px;
+	}
+}
+
+.input {
+	border: 1px solid #cfd1d9;
+	height: 48px;
+	width: 100%;
+	padding-left: 48px;
+	font-size: 16px;
+	background: transparent url('/images/searchIcon.svg') 16px center no-repeat;
+	border-radius: 24px;
+
+	&::placeholder {
+		color: #989cac;
+		opacity: 1; /* Firefox */
+	}
+}
+
+.checkboxContainer {
+	display: flex;
+	align-items: center;
+	margin-top: 14px;
+}
+
+.label {
+	margin-left: 12px;
+	font-size: 14px;
+	color: #4e515d;
+}
