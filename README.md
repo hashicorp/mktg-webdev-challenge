@@ -20,7 +20,7 @@ We expect this to be done within a day or two's worth of full-time work - about 
 
 ### Using the Discord channel
 
-You will have been added to a private discord channel with a few members of our team. The purpose of this channel is to give a space for us to collaborate together, again, to simulate us working together. Use the channel to ask questions, get clarity on anything ambiguous and share your approach to the work. Asking questions and being active in the channel are positive things, not negative. We don't expect you to have all the answers! There aren't any tricks in this challenge, but just like in real work, there are areas of ambiguity so if you're completing the challenge without any questions, you should reconsider.
+You will have been added to a private discord channel with a few members of our team. The purpose of this channel is to give a space for us to collaborate together, again, to simulate us working together. Use the channel to ask questions, get clarity on anything ambiguous and share your approach to the work. Asking questions and being active in the channel are positive things, not negative. We don't expect you to have all the answers! There aren't any tricks in this challenge, but just like in real work, there are areas of ambiguity. So if you're completing the challenge without any questions, you should reconsider your assumptions and collaborate with the team to ensure the best possible outcome.
 
 ### Fetching Data
 
