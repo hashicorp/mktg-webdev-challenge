@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import React, { ReactNode } from 'react'
 import navData from '../../data/nav-data.json'
 import Nav from './components/nav'
