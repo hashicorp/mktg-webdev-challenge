@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // A basic button to serve as an example of a component
 // and also to bring you from the instructions page to the template!
 
