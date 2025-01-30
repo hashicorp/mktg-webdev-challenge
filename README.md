@@ -32,7 +32,6 @@ This project uses [Next.js](https://nextjs.org), a react-based framework that ge
 
 Next.js [conventions](https://nextjs.org/learn/basics/fetching-data-for-pages) dictate that an async function called `getStaticProps` can be exported along with any component within the `pages` directory. This function will be executed before the component mounts, passing the returned object into the component as props.
 
-You'll see a similar template provided in the `pages/people` folder, which works out of the box.
 
 We will provide you with a `DATO_API_TOKEN` for use in the `.env`, and for Sr. candidates also in the `createDB.ts`, file so that you can load data from a Dato instance. Also the cda-explorer.datocms.com tool we reference below will also need you to put in your `DATO_API_TOKEN` for it to work.
 
