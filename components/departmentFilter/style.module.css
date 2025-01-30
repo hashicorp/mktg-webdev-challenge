@@ -1,0 +1,105 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
+.container {
+	display: none;
+	@media (--medium-up) {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		min-width: 200px;
+		width: 100%;
+	}
+}
+
+.title {
+	font-family: Open Sans, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 28px;
+	text-align: center;
+	color: #373942;
+	margin: 0;
+}
+
+.clearFilterButton {
+	&:hover {
+		text-decoration: underline;
+	}
+
+	font-family: Open Sans, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	height: 24px;
+	line-height: 24px;
+	text-align: left;
+	color: #1563ff;
+	appearance: none;
+	border: none;
+	background: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+	padding: 0;
+	margin-left: 4px;
+}
+
+.notVisible {
+	visibility: hidden;
+}
+
+.departmentFilterTreeContainer {
+	margin-left: 10px;
+	width: 100%;
+}
+
+.notRoot > ul {
+	border-left: 1px solid #e0e0e0;
+	margin-left: 10px;
+}
+
+.departmentFilterTreeList {
+	list-style: none;
+	margin: 0;
+	padding-left: 8px;
+}
+
+.departmentFilterTreeIext {
+	&:hover {
+		text-decoration: underline;
+		color: #1563ff;
+	}
+
+	&[aria-pressed='true'] {
+		color: #1563ff;
+	}
+
+	font-family: Open Sans, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+	color: #484848;
+	appearance: none;
+	border: none;
+	background: none;
+}
+
+.departmentFilterTreeToggleCaret {
+	appearance: none;
+	border: none;
+	background: none;
+	margin-left: -22px;
+}
+
+.caretIconOpen {
+	transform: rotate(90deg);
+}
+
+.caratIcon {
+	background-color: white;
+}
