@@ -1,7 +1,7 @@
 {
 	"name": "mktg-dev-test",
 	"description": "Technical evaluation for web dev applicants",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"author": "HashiCorp",
 	"dependencies": {
 		"@datocms/cda-client": "^0.2.6",
