@@ -70,7 +70,7 @@ We'll review your PR and leave comments and questions. You're not expected to wr
 ## Acceptance Criteria / TL;DR:
 
 - [ ] The department tree creation function does not work. You will need to troubleshoot and fix it for the filtering to work as expected.
-- [ ] You should build all the components you need for this project on your own, within this project. While you should not use external packages we do welcome discussions on where an external package might be a better fit.
+- [ ] You should build all the components you need for this project on your own, within this project. While you should not use external packages, we do welcome discussions on where an external package might be a better fit.
 - [ ] A simple [Profile component](components/profile/index.tsx) for the people cards has already been created. You may modify this and any other components as needed.
   - [ ] All images on the page can be retrieved from the CMS via URLs from the graphql query.
 - [ ] We expect the page to be styled responsively so it looks great on both mobile and desktop.
