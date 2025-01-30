@@ -76,7 +76,7 @@ We'll review your PR and leave comments and questions. You're not expected to wr
 - [ ] We expect the page to be styled responsively so it looks great on both mobile and desktop.
 - [ ] Matching person results should update in real-time while typing.
 - [ ] Clicking the "Hide people missing a profile image" should filter users without an image.
-- [ ] If no results match the search, show "No results found" UI from mock
+- [ ] If no results match the search, show "No results found" UI from the Figma design
 - [ ] Selecting a department in the sidebar should filter the results to only that department.
 - [ ] Match [Figma designs](https://www.figma.com/design/0c70HmKc0rkWCNdP9UYErO) using modern CSS
 - [ ] For Web Engineer I and Web Engineer II candidates: Limit search results to 100 people
