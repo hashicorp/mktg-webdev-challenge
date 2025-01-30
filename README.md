@@ -10,6 +10,10 @@ Hi! Thanks so much for interviewing with us 💖. If you are reading this, it me
 
 The task is to build a "people directory" page. This page should allow visitors to search by name for a person. If this were a real page, we'd want to search all 317 records in our CMS, but for the purposes of this exercise, limit your results to 100. This is the maximum number of results that our CMS API will return in a single page.
 
+[Here's the "people directory" page! 👉](/people)
+
+_**Note:** The above link will only work when opened inside the project running locally._
+
 Use [this Figma file](https://www.figma.com/design/0c70HmKc0rkWCNdP9UYErO) as your source of truth for design and behavior:
 
 _**Note:** If you are unable to inspect elements in the design to get exact values for colors and font styles, make sure you're signed in with a Figma account, as we will expect your submission to match the design as closely as possible._
