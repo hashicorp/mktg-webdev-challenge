@@ -3,11 +3,18 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-export interface DepartmentRecord {
+export type DepartmentTree = DepartmentRecord[]
+
+export interface Department {
 	id: string
-	name?: string
+	name: string
+}
+export interface DepartmentNode extends Department {
+	parent: Department | null
+}
+
+export interface DepartmentRecord extends DepartmentNode {
 	children?: DepartmentRecord[]
-	parent?: DepartmentRecord
 }
 
 export interface PersonRecord {
@@ -18,5 +25,5 @@ export interface PersonRecord {
 		url: string
 		alt?: string
 	}
-	department?: DepartmentRecord
+	department?: Department
 }

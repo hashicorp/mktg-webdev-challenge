@@ -27,10 +27,7 @@ export default function IndexPage({ mdxSource }: Props): React.ReactElement {
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
-	const source = fs.readFileSync(
-		path.join(process.cwd(), 'pages/home/content.mdx'),
-		'utf8'
-	)
+	const source = fs.readFileSync(path.join(process.cwd(), 'README.md'))
 
 	const mdxSource = await serialize(source, {
 		mdxOptions: {
