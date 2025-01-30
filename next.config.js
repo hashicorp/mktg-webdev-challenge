@@ -6,7 +6,7 @@
 const withHashicorp = require('@hashicorp/platform-nextjs-plugin')
 
 module.exports = withHashicorp({
-	dato: { token: process.env.DATO_API_TOKEN },
+	dato: { token: `${process.env.DATO_API_TOKEN}` },
 	nextOptimizedImages: true,
 })({
 	images: {
