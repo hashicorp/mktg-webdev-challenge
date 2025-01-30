@@ -33,7 +33,9 @@ This project uses [Next.js](https://nextjs.org), a react-based framework that ge
 Next.js [conventions](https://nextjs.org/learn/basics/fetching-data-for-pages) dictate that an async function called `getStaticProps` can be exported along with any component within the `pages` directory. This function will be executed before the component mounts, passing the returned object into the component as props.
 
 
-We will provide you with a `DATO_API_TOKEN` for use in the `.env`, and for Sr. candidates also in the `createDB.ts`, file so that you can load data from a Dato instance. Also the cda-explorer.datocms.com tool we reference below will also need you to put in your `DATO_API_TOKEN` for it to work.
+We will provide you with a `DATO_API_TOKEN` to add to your `.env` file. For Sr. candidates, you will need to add it in `createDB.ts` in order to load data from a DatoCMS.
+
+The cda-explorer.datocms.com tool referenced below should have `<ADD_DATO_API_TOKEN_HERE>` replaced with the `DATO_API_TOKEN` value for it to work.
 
 Our CMS, [DatoCMS](https://www.datocms.com/), exposes a public GraphQL API to our data which you can explore [here](https://cda-explorer.datocms.com/?apitoken=<ADD_DATO_API_TOKEN_HERE>&query=query%20%7B%0A%20%20allDepartments%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20parent%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20%0A%20%20allPeople%28first%3A%20100%29%20%7B%0A%20%20%20%20name%0A%20%20%20%20avatar%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20department%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D) using GraphiQL. We loaded up the same query as you have in the `people` folder by default. Use this interface to explore our schema and put together a query that fetches the data you need for the page.
 
