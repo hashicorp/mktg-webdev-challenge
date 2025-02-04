@@ -20,7 +20,7 @@ _**Note:** If you are unable to inspect elements in the design to get exact valu
 
 There are definitely some parts of this that are a little ambiguous, which is how real world projects always work. Treat this the same way you would if you started working with us and this was your first day — this is quite similar to the type of task we would assign a new hire on their first day. We will set up a Discord channel for you to ask questions, get clarification, and collaborate with us in general, and we strongly encourage you to take advantage of this.
 
-We expect this to be done within ~4 hours. We know that you likely have other commitments, and so we generally look at about week for candidates to complete the challenge. If your past 4 hours feel free to put 2 more hours in, but we ask for no more than 6 hours of total time spent as we want to be respectful of your time. If you're at or past 6 hours of total time spent, just stop where you are, and we'll complete the evaluation based on what you have done.
+We expect this to be done within ~4 hours. We know that you likely have other commitments, and so we generally look at about week for candidates to complete the challenge. If you're past the 4 hours mark, please send a message to the Discord channel. If you need a few more hours, we can discuss what is left and provide some guidelines for how to continue. 
 
 ### Using the Discord channel
 
