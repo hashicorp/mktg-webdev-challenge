@@ -20,7 +20,7 @@ _**Note:** If you are unable to inspect elements in the design to get exact valu
 
 There are definitely some parts of this that are a little ambiguous, which is how real world projects always work. Treat this the same way you would if you started working with us and this was your first day — this is quite similar to the type of task we would assign a new hire on their first day. We will set up a Discord channel for you to ask questions, get clarification, and collaborate with us in general, and we strongly encourage you to take advantage of this.
 
-We expect this to be done within 4 hours. We know that you likely have other commitments, and so we generally look at about week for candidates to complete the challenge. If you're approaching 4 hours of total time spent, just stop where you are, and we'll complete the evaluation based on what you have done.
+We expect this to be done within 4-6 hours. We know that you likely have other commitments, and so we generally look at about 3-4 business days for candidates to complete the challenge. If you're approaching 6 hours of total time spent, just stop where you are, and we'll complete the evaluation based on what you have done.
 
 ### Using the Discord channel
 
@@ -31,7 +31,6 @@ You will have been added to a private discord channel with a few members of our 
 This project uses [Next.js](https://nextjs.org), a react-based framework that generates performant websites that blur the lines between static and dynamic rendering. We have a set of internal tools under the banner of `@hashicorp/platform-*` layered into the config that provides several utilities, and is especially helpful for loading remote data.
 
 Next.js [conventions](https://nextjs.org/learn/basics/fetching-data-for-pages) dictate that an async function called `getStaticProps` can be exported along with any component within the `pages` directory. This function will be executed before the component mounts, passing the returned object into the component as props.
-
 
 We will provide you with a `DATO_API_TOKEN` to add to your `.env` file. For Sr. candidates, you will need to add it in `createDB.ts` in order to load data from a DatoCMS.
 
