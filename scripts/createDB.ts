@@ -9,6 +9,7 @@
 
 import Database from 'better-sqlite3'
 import { executeQuery } from '@datocms/cda-client'
+import 'dotenv/config'
 
 const query = `query {
 	allDepartments(first: 100) {
@@ -33,7 +34,7 @@ const query = `query {
 	}
 }`
 
-const DATO_API_TOKEN = '' // the Dato API token is provided in your Discord channel
+const DATO_API_TOKEN = process.env.DATO_API_TOKEN // the Dato API token is provided in your Discord channel
 
 async function main() {
 	// API Docs: https://github.com/WiseLibs/better-sqlite3/blob/master/docs/api.md
