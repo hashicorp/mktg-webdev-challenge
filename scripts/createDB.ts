@@ -34,7 +34,7 @@ const query = `query {
 	}
 }`
 
-const DATO_API_TOKEN = process.env.DATO_API_TOKEN // the Dato API token is provided in your Discord channel
+const DATO_API_TOKEN = process.env.DATO_API_TOKEN // the Dato API token is provided in the Google Doc we shared with you
 
 async function main() {
 	// API Docs: https://github.com/WiseLibs/better-sqlite3/blob/master/docs/api.md
