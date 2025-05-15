@@ -20,6 +20,8 @@ import query from './query.graphql'
 import Profile from 'components/profile'
 import Search from 'components/search'
 import DepartmentFilter from 'components/departmentFilter'
+// Import CSS here
+import styles from './style.module.css'
 
 interface Props {
 	allPeople: PersonRecord[]
@@ -75,9 +77,9 @@ export default function PeoplePage({
 	// Sr. candidate TODO: Update URL based on search and department filters
 
 	return (
-		<main className="g-grid-container">
-			<div>
-				<div>
+		<main className={styles['g-grid-container']}>
+			<div className={styles['searchSection']}>
+				<div className={styles['headerSection']}>
 					<h1>HashiCorp Humans</h1>
 					<span>Find a HashiCorp human</span>
 				</div>

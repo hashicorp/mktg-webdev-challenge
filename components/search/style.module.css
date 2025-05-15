@@ -1,0 +1,75 @@
+.searchSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.headerSection {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.searchContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 20px 0;
+}
+
+.searchInputContainer {
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.searchIcon {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #666;
+	font-size: 18px;
+	pointer-events: none;
+}
+
+.searchInput {
+	width: 100%;
+	padding: 10px 10px 10px 45px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	outline: none;
+
+&:focus {
+	border-color: #1563ff;
+	box-shadow: 0 0 0 2px rgba(21, 99, 255, 0.2);
+}
+}
+
+.checkboxWrapper {
+	margin-top: 12px;
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.checkboxLabel {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.checkboxInput {
+	margin-right: 8px;
+}
+
+.checkboxText {
+	font-size: 14px;
+}

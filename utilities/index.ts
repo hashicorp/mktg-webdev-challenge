@@ -23,21 +23,32 @@ export const buildChildren = (
 	)
 }
 
-// TODO: There is a bug in this function that is causing the DepartmentFilter component to not render correctly
+// Fixed implementation of departmentRecordsToDepartmentTree
 export const departmentRecordsToDepartmentTree = (
 	departments: DepartmentNode[]
 ): DepartmentRecord[] => {
+	// Handle empty array case
+	if (!departments || departments.length === 0) {
+		return []
+	}
+
 	const listWithChildren = buildChildren(departments)
 
+	// Return only root departments (those with no parent or parent not in the list)
 	return departments.reduce(
-		(nestedList: DepartmentRecord[], item: DepartmentRecord) => {
+		(nestedList: DepartmentRecord[], item: DepartmentNode) => {
 			const currentItemWithChildren = listWithChildren[item.id]
 			const currentItemParentId = item.parent?.id
 
 			if (currentItemParentId) {
-				listWithChildren[currentItemParentId].children.push(
-					currentItemWithChildren
-				)
+				// Make sure the parent exists before trying to add children to it
+				if (listWithChildren[currentItemParentId]) {
+					listWithChildren[currentItemParentId].children.push(
+						currentItemWithChildren
+					)
+				}
+			} else {
+				nestedList.push(currentItemWithChildren)
 			}
 
 			return nestedList
